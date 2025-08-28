@@ -1,0 +1,108 @@
+
+:root{
+  --bg:#ffffff;
+  --text:#111111;
+  --muted:#666666;
+  --aqua:#00f5ff;
+  --aqua-dark:#00c6cf;
+  --card:#f7f9fa;
+  --soft:#eef3f5;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:'Source Sans 3',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.narrow{max-width:800px}
+
+.site-header{
+  background:#ffffff;
+  border-bottom:1px solid #e8eef2;
+  position:sticky;top:0;z-index:10;
+}
+.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700}
+.logo{height:36px;width:auto}
+.brand-text{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.3px}
+
+.nav{display:flex;gap:18px;flex-wrap:wrap}
+.nav-link{text-decoration:none;color:var(--text);font-weight:600}
+.nav-link:hover{color:var(--aqua-dark)}
+
+.hero{
+  background:linear-gradient(180deg, var(--aqua) 0%, #eaffff 100%);
+  padding:64px 0;
+}
+.hero h1{
+  font-family:'Montserrat',sans-serif;
+  font-size:42px;
+  margin:0 0 12px;
+}
+.subhead{font-size:18px;color:#123;max-width:800px}
+.cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+
+.btn{
+  display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;
+  font-weight:700;border:2px solid transparent;transition:all .15s ease-in-out
+}
+.btn-primary{background:var(--text);color:#fff}
+.btn-primary:hover{background:#333}
+.btn-secondary{background:transparent;color:var(--text);border-color:var(--text)}
+.btn-secondary:hover{border-color:var(--aqua-dark);color:var(--aqua-dark)}
+
+.section-title{
+  font-family:'Montserrat',sans-serif;
+  font-size:26px;margin:36px 0 12px;
+}
+.cards{padding:34px 0}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{
+  background:var(--card);border:1px solid #e4ebef;border-radius:14px;padding:16px;
+}
+.card h3{margin:0 0 8px}
+
+.trust{padding:8px 0 28px}
+.trust-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.trust-items>div{background:var(--soft);padding:12px;border-radius:12px;border:1px solid #e4ebef}
+
+.quote blockquote{
+  margin:26px 0;
+  padding:18px 22px;border-left:4px solid var(--aqua);background:#f9feff;border-radius:8px;
+}
+
+.service-block{margin:28px 0;padding:18px;border:1px solid #e8eef2;border-radius:12px;background:#fff}
+.service-block h2{font-family:'Montserrat',sans-serif;margin:0 0 6px}
+.service-block h4{margin:18px 0 6px;color:#123}
+
+.course{padding:12px 0;border-bottom:1px dashed #dbe4ea}
+.note{margin-top:16px;color:var(--muted)}
+
+.contact-form{
+  display:grid;gap:12px;margin:10px 0 18px;
+}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:10px;border:1px solid #d9e3ea;border-radius:10px;font-size:16px
+}
+.contact-form button{cursor:pointer}
+
+.site-footer{
+  margin-top:48px;padding:22px 0;border-top:1px solid #e8eef2;background:#ffffff;
+}
+.footer-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand-mini{font-family:'Montserrat',sans-serif;font-weight:700}
+.tagline{color:var(--muted)}
+.motto{margin-top:6px;font-weight:700}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap}
+.footer-links a{text-decoration:none;color:var(--text)}
+.footer-links a:hover{color:var(--aqua-dark)}
+.copyright{font-size:12px;color:#777;margin-top:8px;text-align:center}
+
+@media (max-width:640px){
+  .hero h1{font-size:34px}
+}
