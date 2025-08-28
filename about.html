@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | Who We Serve & How We Work</title>
   <meta name="description" content="Cross-sector experience in evaluation, workforce strategy, and change management. Our work is guided by fairness, sustainability, trust, and community." />
+  <meta property="og:title" content="About | Who We Serve & How We Work" />
+  <meta property="og:description" content="Cross-sector experience in evaluation, workforce strategy, and change management. Our work is guided by fairness, sustainability, trust, and community." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.jpg" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site-header">
+<header class="site-header" role="banner">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="Ox Research logo" class="logo" />
-      <span class="brand-text">Ox Research</span>
+    <a class="brand" href="index.html" aria-label="Ox Research home">
+      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
     </a>
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="research.html" class="nav-link">Research</a>
@@ -54,12 +60,15 @@
 </section>
 
 </main>
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
-    <div>
-      <div class="brand-mini">Ox Research</div>
-      <div class="tagline">Evidence-Based Research. Real-World Impact.</div>
-      <div class="motto">Moving Forward.</div>
+    <div class="footer-brand">
+      <img src="logo_full.png" alt="Ox Research" class="logo-foot" />
+      <div>
+        <div class="brand-mini">Ox Research</div>
+        <div class="tagline">Evidence-Based Research. Real-World Impact.</div>
+        <div class="motto">Moving Forward.</div>
+      </div>
     </div>
     <div class="footer-links">
       <a href="services.html">Services</a>

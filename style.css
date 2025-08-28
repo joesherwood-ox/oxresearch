@@ -2,9 +2,10 @@
 :root{
   --bg:#ffffff;
   --text:#111111;
-  --muted:#666666;
+  --muted:#6b7280;
   --aqua:#00f5ff;
   --aqua-dark:#00c6cf;
+  --ocean:#012a4a;
   --card:#f7f9fa;
   --soft:#eef3f5;
 }
@@ -27,34 +28,34 @@ body{
   position:sticky;top:0;z-index:10;
 }
 .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700}
-.logo{height:36px;width:auto}
-.brand-text{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:.3px}
-
+.brand{display:flex;align-items:center;text-decoration:none;color:var(--text);font-weight:700}
+.logo{height:60px;width:auto;display:block}
 .nav{display:flex;gap:18px;flex-wrap:wrap}
 .nav-link{text-decoration:none;color:var(--text);font-weight:600}
-.nav-link:hover{color:var(--aqua-dark)}
+.nav-link:hover{color:var(--ocean)}
 
-.hero{
-  background:linear-gradient(180deg, var(--aqua) 0%, #eaffff 100%);
-  padding:64px 0;
+.hero{position:relative;padding:96px 0;color:#fff}
+.hero-image{
+  background:
+    linear-gradient(180deg, rgba(1,42,74,.75), rgba(1,42,74,.6)),
+    url('hero.jpg') center/cover no-repeat;
 }
 .hero h1{
   font-family:'Montserrat',sans-serif;
-  font-size:42px;
+  font-size:44px;
   margin:0 0 12px;
 }
-.subhead{font-size:18px;color:#123;max-width:800px}
+.subhead{font-size:18px;max-width:800px}
 .cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
 
 .btn{
   display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;
   font-weight:700;border:2px solid transparent;transition:all .15s ease-in-out
 }
-.btn-primary{background:var(--text);color:#fff}
-.btn-primary:hover{background:#333}
-.btn-secondary{background:transparent;color:var(--text);border-color:var(--text)}
-.btn-secondary:hover{border-color:var(--aqua-dark);color:var(--aqua-dark)}
+.btn-primary{background:var(--aqua);color:#000;border-color:transparent}
+.btn-primary:hover{background:var(--aqua-dark)}
+.btn-secondary{background:transparent;color:#fff;border-color:#fff}
+.btn-secondary:hover{border-color:var(--aqua);color:var(--aqua)}
 
 .section-title{
   font-family:'Montserrat',sans-serif;
@@ -66,14 +67,16 @@ body{
   background:var(--card);border:1px solid #e4ebef;border-radius:14px;padding:16px;
 }
 .card h3{margin:0 0 8px}
+.icon{font-size:22px;color:var(--ocean);margin-bottom:6px}
 
-.trust{padding:8px 0 28px}
-.trust-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.trust-items>div{background:var(--soft);padding:12px;border-radius:12px;border:1px solid #e4ebef}
+.band{padding:28px 0}
+.band-blue{background:var(--ocean);color:#fff}
+.band-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.band-grid>div{background:rgba(255,255,255,.08);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15)}
 
 .quote blockquote{
   margin:26px 0;
-  padding:18px 22px;border-left:4px solid var(--aqua);background:#f9feff;border-radius:8px;
+  padding:18px 22px;border-left:4px solid var(--aqua);background:#f9feff;border-radius:8px;color:#0b2235;
 }
 
 .service-block{margin:28px 0;padding:18px;border:1px solid #e8eef2;border-radius:12px;background:#fff}
@@ -95,14 +98,17 @@ body{
   margin-top:48px;padding:22px 0;border-top:1px solid #e8eef2;background:#ffffff;
 }
 .footer-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-brand{display:flex;gap:12px;align-items:center}
+.logo-foot{height:36px;width:auto}
 .brand-mini{font-family:'Montserrat',sans-serif;font-weight:700}
 .tagline{color:var(--muted)}
 .motto{margin-top:6px;font-weight:700}
 .footer-links{display:flex;gap:14px;flex-wrap:wrap}
 .footer-links a{text-decoration:none;color:var(--text)}
-.footer-links a:hover{color:var(--aqua-dark)}
+.footer-links a:hover{color:var(--ocean)}
 .copyright{font-size:12px;color:#777;margin-top:8px;text-align:center}
 
 @media (max-width:640px){
   .hero h1{font-size:34px}
+  .logo{height:48px}
 }

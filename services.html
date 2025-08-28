@@ -5,19 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Services | Evaluation, Organizational Performance, L&D, Selection, Leadership</title>
   <meta name="description" content="Five core services: program evaluation, organizational performance systems, learning & development, recruitment & selection, leadership & team building." />
+  <meta property="og:title" content="Services | Evaluation, Organizational Performance, L&D, Selection, Leadership" />
+  <meta property="og:description" content="Five core services: program evaluation, organizational performance systems, learning & development, recruitment & selection, leadership & team building." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero.jpg" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="site-header">
+<header class="site-header" role="banner">
   <div class="container nav-wrap">
-    <a class="brand" href="index.html">
-      <img src="logo.png" alt="Ox Research logo" class="logo" />
-      <span class="brand-text">Ox Research</span>
+    <a class="brand" href="index.html" aria-label="Ox Research home">
+      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
     </a>
-    <nav class="nav">
+    <nav class="nav" role="navigation" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="research.html" class="nav-link">Research</a>
@@ -34,7 +40,7 @@
   <p>Each engagement is tailored to your context and constraints, with an emphasis on clarity, practicality, and measurable outcomes.</p>
 
   <article class="service-block">
-    <h2>1) Research & Program Evaluation</h2>
+    <h2><i class="fa-solid fa-chart-line"></i> 1) Research & Program Evaluation</h2>
     <h4>What we deliver</h4>
     <ul>
       <li>Mixed-methods evaluations (surveys, interviews, focus groups, administrative data)</li>
@@ -65,7 +71,7 @@
   </article>
 
   <article class="service-block">
-    <h2>2) Organizational Performance</h2>
+    <h2><i class="fa-solid fa-cogs"></i> 2) Organizational Performance</h2>
     <h4>What we deliver</h4>
     <ul>
       <li>Goal-setting frameworks and aligned metrics</li>
@@ -98,7 +104,7 @@
   </article>
 
   <article class="service-block">
-    <h2>3) Learning & Development</h2>
+    <h2><i class="fa-solid fa-graduation-cap"></i> 3) Learning & Development</h2>
     <h4>What we deliver</h4>
     <ul>
       <li>Needs analysis and skill maps</li>
@@ -128,7 +134,7 @@
   </article>
 
   <article class="service-block">
-    <h2>4) Recruitment & Selection</h2>
+    <h2><i class="fa-solid fa-user-check"></i> 4) Recruitment & Selection</h2>
     <h4>What we deliver</h4>
     <ul>
       <li>Job analysis and success profiles</li>
@@ -158,7 +164,7 @@
   </article>
 
   <article class="service-block">
-    <h2>5) Leadership & Team Building</h2>
+    <h2><i class="fa-solid fa-users"></i> 5) Leadership & Team Building</h2>
     <h4>What we deliver</h4>
     <ul>
       <li>Leader capability frameworks and diagnostics</li>
@@ -189,12 +195,15 @@
 </section>
 
 </main>
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
   <div class="container footer-grid">
-    <div>
-      <div class="brand-mini">Ox Research</div>
-      <div class="tagline">Evidence-Based Research. Real-World Impact.</div>
-      <div class="motto">Moving Forward.</div>
+    <div class="footer-brand">
+      <img src="logo_full.png" alt="Ox Research" class="logo-foot" />
+      <div>
+        <div class="brand-mini">Ox Research</div>
+        <div class="tagline">Evidence-Based Research. Real-World Impact.</div>
+        <div class="motto">Moving Forward.</div>
+      </div>
     </div>
     <div class="footer-links">
       <a href="services.html">Services</a>
