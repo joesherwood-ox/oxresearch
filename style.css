@@ -1,151 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ox Research | Program Evaluation & Organizational Performance</title>
+  <meta name="description" content="Ox Research partners with mission-driven organizations to evaluate programs, strengthen organizational performance, and develop people—so resources create measurable outcomes." />
 
-:root{
-  --bg:#ffffff;
-  --text:#111111;
-  --muted:#6b7280;
-  --aqua:#00f5ff;
-  --aqua-dark:#00c6cf;
-  --ocean:#012a4a;
-  --card:#f7f9fa;
-  --soft:#eef3f5;
-}
+  <!-- Favicon(s) -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family:'Source Sans 3',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.6;
-}
+  <!-- Site styles -->
+  <link rel="stylesheet" href="style.css" />
 
-.container{max-width:1100px;margin:0 auto;padding:0 20px}
-.narrow{max-width:800px}
+  <!-- Home-page-only animation styles (isolated selectors so nothing else changes) -->
+  <style>
+    /* ===== OX logo one-time intro (home page) ===== */
+    .brand-anim{ position:relative; display:inline-block; }
+    .brand-anim .logo{ display:block; } /* uses your existing .logo sizing */
 
-.site-header{
-  background:#ffffff;
-  border-bottom:1px solid #e8eef2;
-  position:sticky;top:0;z-index:10;
-}
-.nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
-.brand{display:flex;align-items:center;text-decoration:none;color:var(--text);font-weight:700}
-.logo{height:60px;width:auto;display:block}
-.nav{display:flex;gap:18px;flex-wrap:wrap}
-.nav-link{text-decoration:none;color:var(--text);font-weight:600}
-.nav-link:hover{color:var(--ocean)}
+    .logo-anim-ovl{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+      pointer-events:none;
+    }
 
-.hero{position:relative;padding:96px 0;color:#fff}
-.hero-image{
-  background:
-    linear-gradient(180deg, rgba(1,42,74,.75), rgba(1,42,74,.6)),
-    url('hero.jpg') center/cover no-repeat;
-}
-.hero h1{
-  font-family:'Montserrat',sans-serif;
-  font-size:44px;
-  margin:0 0 12px;
-}
-.subhead{font-size:18px;max-width:800px}
-.cta-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+    .logo-motto{
+      position:absolute;
+      left: calc(50% + 40px);  /* fine-tune if motto starts too far left/right */
+      bottom: -6px;
+      font-weight:600;
+      color: var(--muted, #5a6672);
+      transform: translateX(-18px);
+      opacity:0;
+      white-space: nowrap;
+    }
 
-.btn{
-  display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;
-  font-weight:700;border:2px solid transparent;transition:all .15s ease-in-out
-}
-.btn-primary{background:var(--aqua);color:#000;border-color:transparent}
-.btn-primary:hover{background:var(--aqua-dark)}
-.btn-secondary{background:transparent;color:#fff;border-color:#fff}
-.btn-secondary:hover{border-color:var(--aqua);color:var(--aqua)}
+    /* Keyframes */
+    @keyframes xToGrid { from{transform:translate(120px,40px) rotate(45deg)}
+      60%{transform:translate(120px,40px) rotate(0)} to{transform:translate(120px,40px) rotate(0)} }
+    @keyframes graphDraw { 0%{opacity:0;stroke-dasharray:0 400}
+      15%{opacity:1} 100%{opacity:1;stroke-dasharray:200 200} }
+    @keyframes mottoSlide { from{transform:translateX(-18px);opacity:0} to{transform:translateX(0);opacity:1} }
+    @keyframes snapBounce { 0%{transform:scale(1)} 40%{transform:scale(1.06)} 100%{transform:scale(1)} }
 
-.section-title{
-  font-family:'Montserrat',sans-serif;
-  font-size:26px;margin:36px 0 12px;
-}
-.cards{padding:34px 0}
-.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.card{
-  background:var(--card);border:1px solid #e4ebef;border-radius:14px;padding:16px;
-}
-.card h3{margin:0 0 8px}
-.icon{font-size:22px;color:var(--ocean);margin-bottom:6px}
+    /* Turn on animations when wrapper gets the class */
+    .brand-anim.animating #x-mark  { animation:xToGrid 900ms cubic-bezier(.2,.7,.2,1) forwards }
+    .brand-anim.animating #graph   { animation:graphDraw 900ms 150ms ease-out forwards }
 
-.band{padding:28px 0}
-.band-blue{background:var(--ocean);color:#fff}
-.band-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-.band-grid>div{background:rgba(255,255,255,.08);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,.15)}
+    /* ring growth handled via JS; transitions make it smooth */
+    .brand-anim.animating #o-teal  { transition: stroke-dasharray 900ms ease, stroke-dashoffset 900ms ease }
+    .brand-anim.animating #o-blue  { transition: stroke-dasharray 600ms ease 350ms, stroke-dashoffset 600ms ease 350ms }
+    .brand-anim.animating #motto   { animation:mottoSlide 500ms 1050ms ease forwards }
 
-.quote blockquote{
-  margin:26px 0;
-  padding:18px 22px;border-left:4px solid var(--aqua);background:#f9feff;border-radius:8px;color:#0b2235;
-}
+    .brand-anim.reversing{ animation:snapBounce 260ms ease-out; }
+    .brand-anim.hidden-ovl .logo-anim-ovl{ opacity:0; }
 
-.service-block{margin:28px 0;padding:18px;border:1px solid #e8eef2;border-radius:12px;background:#fff}
-.service-block h2{font-family:'Montserrat',sans-serif;margin:0 0 6px}
-.service-block h4{margin:18px 0 6px;color:#123}
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .brand-anim.animating #x-mark,
+      .brand-anim.animating #graph,
+      .brand-anim.animating #o-teal,
+      .brand-anim.animating #o-blue,
+      .brand-anim.animating #motto { animation:none !important; transition:none !important; }
+      .logo-motto{ opacity:1; transform:none; }
+      .logo-anim-ovl{ display:none; }
+    }
+  </style>
+</head>
 
-.course{padding:12px 0;border-bottom:1px dashed #dbe4ea}
-.note{margin-top:16px;color:var(--muted)}
+<body>
+  <!-- ================= Header ================= -->
+  <header class="site-header" role="banner">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Ox Research home">
+        <!-- BEGIN animated logo wrapper -->
+        <div class="brand-anim" id="brandAnim">
+          <!-- Your crisp, final logo image -->
+          <img src="logo_full.png" alt="Ox Research logo" class="logo" id="brandStatic"/>
 
-.contact-form{
-  display:grid;gap:12px;margin:10px 0 18px;
-}
-.contact-form input,.contact-form textarea{
-  width:100%;padding:10px;border:1px solid #d9e3ea;border-radius:10px;font-size:16px
-}
-.contact-form button{cursor:pointer}
+          <!-- Animation overlay (draws over OX then hides) -->
+          <svg class="logo-anim-ovl" viewBox="0 0 240 80" aria-hidden="true">
+            <defs>
+              <style>
+                .c-black{stroke:#111}
+                .c-teal{stroke:#23F1F1}      /* turquoise */
+                .c-blue{stroke:#0D3B52}      /* deep ocean blue */
+              </style>
+            </defs>
 
-.site-footer{
-  margin-top:48px;padding:22px 0;border-top:1px solid #e8eef2;background:#ffffff;
-}
-.footer-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.footer-brand{display:flex;gap:12px;align-items:center}
-.logo-foot{height:64px;width:auto}
-.brand-mini{font-family:'Montserrat',sans-serif;font-weight:700}
-.tagline{color:var(--muted)}
-.motto{margin-top:6px;font-weight:700}
-.footer-links{display:flex;gap:14px;flex-wrap:wrap}
-.footer-links a{text-decoration:none;color:var(--text)}
-.footer-links a:hover{color:var(--ocean)}
-.copyright{font-size:12px;color:#777;margin-top:8px;text-align:center}
+            <!-- O ring -->
+            <circle id="o-base" cx="40" cy="40" r="26" fill="none" stroke="#111" stroke-width="8"/>
+            <circle id="o-teal" cx="40" cy="40" r="26" class="c-teal" fill="none" stroke-width="8"
+                    stroke-dasharray="0 999" stroke-dashoffset="0"/>
+            <circle id="o-blue" cx="40" cy="40" r="26" class="c-blue" fill="none" stroke-width="8"
+                    stroke-dasharray="0 999" stroke-dashoffset="0"/>
 
-@media (max-width:640px){
-  .hero h1{font-size:34px}
-  .logo{height:48px}
-}
-/* ===== OX intro animation (home only) ===== */
-.logo-anim-wrap{ position:relative; display:inline-flex; align-items:center; gap:14px; }
-.logo-anim{ width:220px; height:74px; display:block; }
-.logo-word{
-  position:absolute; left:86px; top:15px;
-  font-family:'Montserrat', system-ui, sans-serif;
-  font-weight:700; font-size:24px; letter-spacing:.5px; color:#111;
-}
-.logo-motto{ font-weight:600; color:var(--muted,#5a6672); transform:translateX(-14px); opacity:0; }
+            <!-- X (starts 45°, rotates to 0° like grid axes) -->
+            <g id="x-mark" transform="translate(120,40) rotate(45)">
+              <line x1="-28" y1="0" x2="28" y2="0" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+              <line x1="0"  y1="-28" x2="0"  y2="28" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+            </g>
 
-@keyframes xToGrid{ from{transform:translate(120px,40px) rotate(45deg)}
-  60%{transform:translate(120px,40px) rotate(0)} to{transform:translate(120px,40px) rotate(0)} }
-@keyframes graphDraw{ 0%{opacity:0;stroke-dasharray:0 400} 15%{opacity:1}
-  100%{opacity:1;stroke-dasharray:200 200} }
-@keyframes tealGrow{ from{stroke-dasharray:0 999;stroke-dashoffset:0}
-  to{stroke-dasharray:172 999;stroke-dashoffset:-136} }
-@keyframes blueSlice{ from{stroke-dasharray:0 999;stroke-dashoffset:0}
-  to{stroke-dasharray:26 999;stroke-dashoffset:-42} }
-@keyframes mottoSlide{ from{transform:translateX(-18px);opacity:0} to{transform:translateX(0);opacity:1} }
-@keyframes bounceBack{ 0%{transform:scale(1)} 40%{transform:scale(1.06)} 100%{transform:scale(1)} }
+            <!-- Graph line (up/right) -->
+            <polyline id="graph" fill="none" class="c-blue" stroke-width="5"
+                      points="120,55 140,48 165,40 190,28"
+                      stroke-linecap="round" stroke-linejoin="round"
+                      stroke-dasharray="0 999" stroke-dashoffset="0" opacity="0"/>
+          </svg>
 
-.ox-animating #x-mark{ animation:xToGrid 900ms cubic-bezier(.2,.7,.2,1) forwards }
-.ox-animating #graph{ animation:graphDraw 900ms 150ms ease-out forwards }
-.ox-animating #o-teal{ animation:tealGrow 900ms 150ms ease forwards }
-.ox-animating #o-blue{ animation:blueSlice 900ms 350ms ease forwards }
-.ox-animating .logo-motto{ animation:mottoSlide 500ms 1050ms ease forwards }
+          <!-- Motto appears, then overlay hides -->
+          <div class="logo-motto" id="motto">Moving forward.</div>
+        </div>
+        <!-- END animated logo wrapper -->
+      </a>
 
-.ox-reverse #x-mark{ animation:xToGrid 260ms reverse ease-out forwards }
-.ox-reverse #graph{ opacity:0 !important }
-.ox-reverse #o-teal,.ox-reverse #o-blue{ animation:none }
-.ox-reverse{ animation:bounceBack 260ms ease-out }
+      <nav class="nav" role="navigation" aria-label="Primary">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="courses.html" class="nav-link">Courses</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-@media (prefers-reduced-motion:reduce){
-  .ox-animating #x-mark,.ox-animating #graph,.ox-animating #o-teal,
-  .ox-animating #o-blue,.ox-animating .logo-motto{ animation:none !important }
-  .logo-motto{ opacity:1; transform:none }
-}
+  <!-- ================= Hero ================= -->
+  <section class="hero" role="region" aria-label="Hero">
+    <div class="container hero-inner">
+      <h1 class="display">Evidence-Based Research. Real-World Impact.</h1>
+      <p class="lead">
+        Ox Research partners with mission-driven organizations to evaluate programs,
+        strengthen organizational performance, and develop people—so resources
+        create measurable outcomes.
+      </p>
+      <div class="hero-cta">
+        <a href="contact.html" class="btn btn-primary">Work With Us</a>
+        <a href="services.html" class="btn btn-ghost">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= What We Do ================= -->
+  <main id="main" class="site-main" role="main">
+    <section class="section">
+      <div class="container">
+        <h2>What We Do</h2>
+
+        <div class="card-grid">
+          <article class="card">
+            <div class="card-icn">📈</div>
+            <h3>Research &amp; Program Evaluation</h3>
+            <p>Measure impact with mixed-methods studies and clear, actionable findings.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icn">⚙️</div>
+            <h3>Organizational Performance</h3>
+            <p>Align goals, feedback, decisions, HRIS systems, and change management—leveraging knowledge management and responsible AI.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icn">🎓</div>
+            <h3>Learning &amp; Development</h3>
+            <p>Build skills with research-driven training that sticks.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icn">🧩</div>
+            <h3>Recruitment &amp; Selection</h3>
+            <p>Hire smarter with valid, fair, evidence-based assessments.</p>
+          </article>
+
+          <article class="card">
+            <div class="card-icn">🤝</div>
+            <h3>Leadership &amp; Team Building</h3>
+            <p>Elevate decision-making, communication, and trust across teams.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo_full.png" alt="Ox Research" class="logo-foot" />
+        <div class="footer-motto">Moving forward.</div>
+      </div>
+      <div class="footer-links">
+        <a href="services.html">Services</a>
+        <a href="research.html">Research</a>
+        <a href="courses.html">Courses</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="container copyright">© Ox Research</div>
+  </footer>
+
+  <!-- One-time OX → graph animation (runs after DOM is ready) -->
+  <script>
+    (function(){
+      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const wrap = document.getElementById('brandAnim');
+      if(!wrap) return;
+
+      // Only run once per visitor
+      try { if(localStorage.getItem('oxIntroDone')) return; } catch(e){}
+
+      if(reduce){
+        try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
+        return;
+      }
+
+      const teal  = document.getElementById('o-teal');
+      const blue  = document.getElementById('o-blue');
+      const R = 26, C = 2*Math.PI*R;
+
+      // Start: bottom half teal (180°), top half black
+      teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
+      teal.setAttribute('stroke-dashoffset', -(C/2));
+      blue.setAttribute('stroke-dasharray', '0 '+C);  // blue slice hidden
+
+      // Kick off CSS animations (X rotation + graph draw + motto slide)
+      wrap.classList.add('animating');
+
+      // Grow teal to ~66% and add ~10% blue slice (sequenced via transitions)
+      requestAnimationFrame(()=>{
+        const tealLen = 0.66 * C;
+        const blueLen = 0.10 * C;
+        teal.setAttribute('stroke-dasharray', tealLen+' '+C);
+        teal.setAttribute('stroke-dashoffset', -(C/2));
+        blue.setAttribute('stroke-dasharray', blueLen+' '+C);
+        blue.setAttribute('stroke-dashoffset', -(C/2) - tealLen);
+      });
+
+      // After motto appears, snap back quickly and hide overlay so PNG remains
+      setTimeout(()=>{
+        wrap.classList.remove('animating');
+        wrap.classList.add('reversing');
+
+        // Reset ring back to half teal
+        teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
+        teal.setAttribute('stroke-dashoffset', -(C/2));
+        blue.setAttribute('stroke-dasharray', '0 '+C);
+
+        setTimeout(()=>{
+          wrap.classList.remove('reversing');
+          wrap.classList.add('hidden-ovl');   // overlay fades; static PNG remains
+          try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
+        }, 280);
+      }, 1350); // ~900ms (X/graph) + ~450ms (motto)
+    })();
+  </script>
+</body>
+</html>
+
