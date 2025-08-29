@@ -43,58 +43,18 @@
   <!-- ================= Header ================= -->
   <header class="site-header" role="banner">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Ox Research home">
-        <!-- BEGIN animated logo wrapper -->
-        <div class="brand-anim" id="brandAnim">
-          <!-- Your crisp, final logo image -->
-          <img src="logo_full.png" alt="Ox Research logo" class="logo" id="brandStatic" style="height:60px;width:auto;" />
-
-          <!-- Animation overlay (draws over OX then hides) -->
-          <svg class="logo-anim-ovl" viewBox="0 0 240 80" aria-hidden="true">
-            <defs>
-              <style>
-                .c-black{stroke:#111}
-                .c-teal{stroke:#23F1F1}      /* turquoise */
-                .c-blue{stroke:#0D3B52}      /* deep ocean blue */
-              </style>
-            </defs>
-
-            <!-- O ring -->
-            <circle id="o-base" cx="40" cy="40" r="26" fill="none" stroke="#111" stroke-width="8"/>
-            <circle id="o-teal" cx="40" cy="40" r="26" class="c-teal" fill="none" stroke-width="8"
-                    stroke-dasharray="0 999" stroke-dashoffset="0"/>
-            <circle id="o-blue" cx="40" cy="40" r="26" class="c-blue" fill="none" stroke-width="8"
-                    stroke-dasharray="0 999" stroke-dashoffset="0"/>
-
-            <!-- X (starts 45°, rotates to 0° like grid axes) -->
-            <g id="x-mark" transform="translate(120,40) rotate(45)">
-              <line x1="-28" y1="0" x2="28" y2="0" stroke="#111" stroke-width="8" stroke-linecap="round"/>
-              <line x1="0"  y1="-28" x2="0"  y2="28" stroke="#111" stroke-width="8" stroke-linecap="round"/>
-            </g>
-
-            <!-- Graph line (up/right) -->
-            <polyline id="graph" fill="none" class="c-blue" stroke-width="5"
-                      points="120,55 140,48 165,40 190,28"
-                      stroke-linecap="round" stroke-linejoin="round"
-                      stroke-dasharray="0 999" stroke-dashoffset="0" opacity="0"/>
-          </svg>
-
-          <!-- Motto appears, then overlay hides -->
-          <div class="logo-motto" id="motto">Moving forward.</div>
-        </div>
-        <!-- END animated logo wrapper -->
-      </a>
-
-      <nav class="nav" role="navigation" aria-label="Primary">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="research.html" class="nav-link">Research</a>
-        <a href="courses.html" class="nav-link">Courses</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
+      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
+    </a>
+    <nav class="nav" role="navigation" aria-label="Primary">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="research.html" class="nav-link">Research</a>
+      <a href="courses.html" class="nav-link">Courses</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
 
   <!-- ================= Hero ================= -->
   <section class="hero" role="region" aria-label="Hero">
