@@ -99,7 +99,7 @@ body{
 }
 .footer-grid{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .footer-brand{display:flex;gap:12px;align-items:center}
-.logo-foot{height:36px;width:auto}
+.logo-foot{height:56px;width:auto}
 .brand-mini{font-family:'Montserrat',sans-serif;font-weight:700}
 .tagline{color:var(--muted)}
 .motto{margin-top:6px;font-weight:700}
