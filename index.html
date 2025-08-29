@@ -21,7 +21,47 @@
 <header class="site-header" role="banner">
   <div class="container nav-wrap">
     <a class="brand" href="index.html" aria-label="Ox Research home">
-      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
+<!-- Animated OX logo (inline SVG) -->
+<div class="logo-anim-wrap" id="oxAnim">
+  <!-- Static word always visible -->
+  <div class="logo-word">RESEARCH</div>
+
+  <!-- The animated O + X -->
+  <svg class="logo-anim" viewBox="0 0 240 80" aria-hidden="true">
+    <defs>
+      <style>
+        .c-black{stroke:#111;}
+        .c-teal{stroke:#23F1F1;}
+        .c-blue{stroke:#0D3B52;} /* deep ocean blue */
+      </style>
+    </defs>
+
+    <!-- O (ring) -->
+    <circle id="o-base" cx="40" cy="40" r="26"
+            fill="none" stroke="#111" stroke-width="8" opacity="1"/>
+    <circle id="o-teal" cx="40" cy="40" r="26"
+            class="c-teal" fill="none" stroke-width="8"
+            stroke-dasharray="0 999" stroke-dashoffset="0"/>
+    <circle id="o-blue" cx="40" cy="40" r="26"
+            class="c-blue" fill="none" stroke-width="8"
+            stroke-dasharray="0 999" stroke-dashoffset="0"/>
+
+    <!-- X (rotates to grid) -->
+    <g id="x-mark" transform="translate(120,40) rotate(45)">
+      <line x1="-28" y1="0" x2="28" y2="0" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+      <line x1="0" y1="-28" x2="0" y2="28" stroke="#111" stroke-width="8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Graph line -->
+    <polyline id="graph" fill="none" class="c-blue" stroke-width="5"
+              points="120,55 140,48 165,40 190,28"
+              stroke-linecap="round" stroke-linejoin="round"
+              stroke-dasharray="0 999" stroke-dashoffset="0" opacity="0"/>
+  </svg>
+
+  <!-- Motto appears after the viz moment -->
+  <div class="logo-motto" id="motto">Moving forward.</div>
+</div>
     </a>
     <nav class="nav" role="navigation" aria-label="Primary">
       <a href="index.html" class="nav-link">Home</a>
