@@ -112,3 +112,40 @@ body{
   .hero h1{font-size:34px}
   .logo{height:48px}
 }
+/* ===== OX intro animation (home only) ===== */
+.logo-anim-wrap{ position:relative; display:inline-flex; align-items:center; gap:14px; }
+.logo-anim{ width:220px; height:74px; display:block; }
+.logo-word{
+  position:absolute; left:86px; top:15px;
+  font-family:'Montserrat', system-ui, sans-serif;
+  font-weight:700; font-size:24px; letter-spacing:.5px; color:#111;
+}
+.logo-motto{ font-weight:600; color:var(--muted,#5a6672); transform:translateX(-14px); opacity:0; }
+
+@keyframes xToGrid{ from{transform:translate(120px,40px) rotate(45deg)}
+  60%{transform:translate(120px,40px) rotate(0)} to{transform:translate(120px,40px) rotate(0)} }
+@keyframes graphDraw{ 0%{opacity:0;stroke-dasharray:0 400} 15%{opacity:1}
+  100%{opacity:1;stroke-dasharray:200 200} }
+@keyframes tealGrow{ from{stroke-dasharray:0 999;stroke-dashoffset:0}
+  to{stroke-dasharray:172 999;stroke-dashoffset:-136} }
+@keyframes blueSlice{ from{stroke-dasharray:0 999;stroke-dashoffset:0}
+  to{stroke-dasharray:26 999;stroke-dashoffset:-42} }
+@keyframes mottoSlide{ from{transform:translateX(-18px);opacity:0} to{transform:translateX(0);opacity:1} }
+@keyframes bounceBack{ 0%{transform:scale(1)} 40%{transform:scale(1.06)} 100%{transform:scale(1)} }
+
+.ox-animating #x-mark{ animation:xToGrid 900ms cubic-bezier(.2,.7,.2,1) forwards }
+.ox-animating #graph{ animation:graphDraw 900ms 150ms ease-out forwards }
+.ox-animating #o-teal{ animation:tealGrow 900ms 150ms ease forwards }
+.ox-animating #o-blue{ animation:blueSlice 900ms 350ms ease forwards }
+.ox-animating .logo-motto{ animation:mottoSlide 500ms 1050ms ease forwards }
+
+.ox-reverse #x-mark{ animation:xToGrid 260ms reverse ease-out forwards }
+.ox-reverse #graph{ opacity:0 !important }
+.ox-reverse #o-teal,.ox-reverse #o-blue{ animation:none }
+.ox-reverse{ animation:bounceBack 260ms ease-out }
+
+@media (prefers-reduced-motion:reduce){
+  .ox-animating #x-mark,.ox-animating #graph,.ox-animating #o-teal,
+  .ox-animating #o-blue,.ox-animating .logo-motto{ animation:none !important }
+  .logo-motto{ opacity:1; transform:none }
+}
