@@ -17,6 +17,45 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
 </head>
+  <script>
+(function(){
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const wrap = document.getElementById('oxAnim');
+  if(!wrap) return;
+  try { if(localStorage.getItem('oxIntroDone')) return; } catch(e){}
+
+  if(prefersReduced){
+    try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
+    return;
+  }
+
+  const teal = document.getElementById('o-teal');
+  const blue = document.getElementById('o-blue');
+  const R = 26, C = 2*Math.PI*R;
+
+  // Start state: half teal (bottom), half black (top)
+  teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
+  teal.setAttribute('stroke-dashoffset', -(C/2));
+  blue.setAttribute('stroke-dasharray', '0 '+C);
+
+  wrap.classList.add('ox-animating');
+
+  setTimeout(()=>{
+    // Snap back to the logo quickly after motto appears
+    wrap.classList.remove('ox-animating');
+    wrap.classList.add('ox-reverse');
+
+    teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
+    teal.setAttribute('stroke-dashoffset', -(C/2));
+    blue.setAttribute('stroke-dasharray', '0 '+C);
+
+    setTimeout(()=>{
+      wrap.classList.remove('ox-reverse');
+      try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
+    },300);
+  },1300);
+})();
+</script>
 <body>
 <header class="site-header" role="banner">
   <div class="container nav-wrap">
