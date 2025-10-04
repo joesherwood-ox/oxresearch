@@ -77,22 +77,40 @@ body{
 h2{font-size:clamp(22px,3.4vw,32px);margin:0 0 12px}
 .lead{color:#49626d;margin:0 0 24px}
 .grid{display:grid;gap:16px}
+/* cards – color + icons */
 .cards{grid-template-columns:repeat(4,1fr)}
 @media (max-width:1024px){.cards{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.cards{grid-template-columns:1fr}}
+
 .card{
   background:var(--panel);
   border:1px solid var(--line);
+  border-top:3px solid var(--brand);
   padding:18px;border-radius:16px;text-decoration:none;color:inherit;
-  display:flex;flex-direction:column;gap:8px
+  display:flex;flex-direction:column;gap:8px;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
 }
-.card:hover{outline:1px solid rgba(0,229,239,.35)}
-.card h3{margin:2px 0 4px;font-size:18px}
-.card .mini{margin:0 0 6px 18px;color:#2b4953}
-.card .mini li{margin:2px 0}
-.card .outcome{color:#2b4953;margin:6px 0 0}
-.card-cta{margin-top:auto;color:#2b4953}
+.card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08)}
 
+.card-icon{
+  width:40px;height:40px;border-radius:12px;
+  display:grid;place-items:center;
+  background:rgba(0,229,239,.12);color:#00b8c0;
+}
+
+.card h3{margin:4px 0 2px;font-size:18px}
+
+/* tighter bullets + custom marker */
+.mini{margin:2px 0 6px 0;padding-left:0}
+.mini li{
+  list-style:none; position:relative; padding-left:18px; margin:4px 0; color:#2b4953;
+}
+.mini li::before{
+  content:""; position:absolute; left:0; top:.6em; width:8px; height:8px;
+  border-radius:50%; background:var(--brand);
+}
+.outcome{color:#2b4953;margin:6px 0 0}
+.card-cta{margin-top:auto;color:#2b4953}
 /* contact */
 .contact{
   display:grid;grid-template-columns:1fr 1fr;gap:14px;
