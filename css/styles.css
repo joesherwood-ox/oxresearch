@@ -145,4 +145,11 @@ a{color:inherit}
 .foot a:hover{ color:var(--ink) }
 .foot-brand{ display:flex; align-items:center; gap:10px }
 .foot-brand img{ height:36px; width:auto }           /* larger ox icon */
-.foot-brand span{ font-weight:600 }
+.foot-brand span{
+  font-family: Helvetica, Arial, sans-serif; /* Helvetica first */
+  text-transform: uppercase;                 /* OX RESEARCH */
+  letter-spacing: .06em;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;                         /* vertically aligns with 36px icon */
+}
