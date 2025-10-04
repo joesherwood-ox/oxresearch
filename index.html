@@ -3,160 +3,147 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ox Research | Evaluation, Org Performance, L&D, Selection</title>
-  <meta name="description" content="Evidence-based evaluation and organizational performance for mission-driven teams. Surveys, analytics, training, selection, and leadership development." />
-  <link rel="icon" href="assets/img/ox-favicon.png" sizes="32x32" />
-  <link rel="preload" as="image" href="assets/img/office-analytics.jpg" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <title>Ox Research | Evidence-Based Research. Real-World Impact.</title>
+  <meta name="description" content="Independent, applied research for program & policy evaluation, market & public opinion, and community engagement. Surveys, interviews, focus groups, analytics, dashboards." />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/ox-favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/ox-favicon.png">
+  <link rel="preload" as="image" href="/assets/img/office-analytics.jpg" />
+  <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
-  <!-- =================== NAV =================== -->
+
+  <!-- NAV -->
   <header class="nav">
     <a class="brand" href="/">
-      <img src="assets/img/ox-logo.png" alt="Ox Research logo mark" class="brand-mark" />
-      <img src="assets/img/ox-wordmark.png" alt="Ox Research wordmark" class="brand-word" />
+      <!-- use one logo only to avoid duplication -->
+      <img src="/assets/img/ox-wordmark.png" alt="Ox Research" class="brand-word" />
     </a>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
     <nav class="nav-links" aria-label="Main">
       <a href="/">Home</a>
-      <a href="services.html">Services</a>
-      <a href="#work">Work</a>
+      <a href="/services.html">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- =================== HERO =================== -->
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-inner container">
-      <h1>Evaluation that leaders can act on.</h1>
-      <p class="sub">
-        We help mission-driven orgs measure impact, align performance systems, and build manager capability—so resources turn into outcomes.
-      </p>
+    <div class="container hero-inner">
+      <h1>Evidence-Based Research. Real-World Impact.</h1>
+      <p class="sub">We help mission-driven organizations, businesses, and public initiatives make smarter decisions with independent, applied research. From evaluating programs and policies to understanding markets and communities, Ox Research delivers clarity you can act on.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Book a 20-min scoping call</a>
-        <a class="btn btn-ghost" href="services.html">Explore services</a>
-      </div>
-      <div class="proof">
-        Trusted across federal, nonprofit, health, and education.
+        <a class="btn btn-primary" href="#contact">Work With Us</a>
+        <a class="btn btn-ghost" href="/services.html">Explore Services</a>
       </div>
     </div>
-    <!-- simple, dependency-free carousel -->
-    <div class="carousel" aria-label="Sector photos">
+
+    <!-- Curated, labeled carousel -->
+    <div class="carousel" aria-label="Key services">
       <button class="car-btn prev" aria-label="Previous slide">‹</button>
       <div class="car-track">
-        <figure class="slide current"><img src="assets/img/office-analytics.jpg" alt="Team reviewing analytics" /></figure>
-        <figure class="slide"><img src="assets/img/healthcare-1.jpg" alt="Healthcare team in discussion" /></figure>
-        <figure class="slide"><img src="assets/img/construction-1.jpg" alt="Construction supervisors onsite" /></figure>
-        <figure class="slide"><img src="assets/img/farm-1.jpg" alt="Rural stakeholders in conversation" /></figure>
-        <figure class="slide"><img src="assets/img/nonprofit-1.jpg" alt="Nonprofit team meeting" /></figure>
+        <!-- Research & Insights -->
+        <figure class="slide current">
+          <img src="/assets/img/office-analytics.jpg" alt="Team reviewing analytics" style="object-position:50% 45%">
+          <figcaption>
+            <strong>Research & Insights</strong>
+            <span>Program & policy evaluation • Market & public opinion • Surveys, interviews, focus groups</span>
+          </figcaption>
+        </figure>
+        <!-- Organizational Effectiveness -->
+        <figure class="slide">
+          <img src="/assets/img/6_Non-Profit Office_Landscape.png" alt="Leadership team meeting" style="object-position:50% 50%">
+          <figcaption>
+            <strong>Organizational Effectiveness</strong>
+            <span>Performance & talent • Culture & change • Strategic planning & process improvement</span>
+          </figcaption>
+        </figure>
+        <!-- Community & Field Research -->
+        <figure class="slide">
+          <img src="/assets/img/4_Farm_Landscape.png" alt="Community research in a rural setting" style="object-position:50% 55%">
+          <figcaption>
+            <strong>Community Research</strong>
+            <span>Engagement & outreach • Spanish/English studies • Stakeholder interviews & facilitation</span>
+          </figcaption>
+        </figure>
+        <!-- Workforce / Safety (Org Effectiveness angle) -->
+        <figure class="slide">
+          <img src="/assets/img/5_Construction_Landscape.png" alt="Workforce huddle on construction site" style="object-position:50% 45%">
+          <figcaption>
+            <strong>Workforce & Operations</strong>
+            <span>Rapid diagnostics • Training impact • Barriers to safe, efficient work</span>
+          </figcaption>
+        </figure>
       </div>
       <button class="car-btn next" aria-label="Next slide">›</button>
     </div>
   </section>
 
-  <!-- =================== SERVICES =================== -->
+  <!-- WHAT WE DO -->
   <section id="services" class="container pad-y">
-    <h2>What we do</h2>
-    <p class="lead">Five core offerings—available as standalone projects or integrated programs.</p>
-
+    <h2>What We Do</h2>
     <div class="grid cards">
-      <!-- 1: Research & Program Evaluation -->
-      <a class="card" href="services.html#evaluation">
-        <div class="card-icon" aria-hidden="true">
-          <!-- pie-chart SVG -->
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M11 2a1 1 0 0 1 1 1v9h9a1 1 0 0 1 1 1 10 10 0 1 1-11-11z"/><path d="M13 2.05A10 10 0 0 1 21.95 11H13z"/></svg>
-        </div>
-        <h3>Research & Program Evaluation</h3>
-        <p>Logic models, survey design (EN/ES), mixed-methods, dashboards, and decision-ready exec summaries.</p>
+      <!-- Research & Insights -->
+      <a class="card" href="/services.html#research">
+        <h3>Research & Insights</h3>
+        <ul class="mini">
+          <li>Program & policy evaluation</li>
+          <li>Market & public opinion research</li>
+          <li>Surveys, interviews, focus groups</li>
+          <li>Benchmarking & secondary data analysis</li>
+          <li>Data viz, reports, dashboards, infographics</li>
+        </ul>
+        <p class="outcome">Outcome: Clear evidence for better decisions—stories and numbers that resonate with executives, funders, and communities.</p>
         <span class="card-cta">Learn more →</span>
       </a>
 
-      <!-- 2: Organizational Performance -->
-      <a class="card" href="services.html#org-performance">
-        <div class="card-icon" aria-hidden="true">
-          <!-- sliders SVG -->
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M21 7H10M4 7H3M21 17H14M8 17H3M7 7v10M15 17V7"/></svg>
-        </div>
-        <h3>Organizational Performance</h3>
-        <p>OKRs, performance diagnostics, process improvement, and change management in complex environments.</p>
+      <!-- Organizational Effectiveness -->
+      <a class="card" href="/services.html#org">
+        <h3>Organizational Effectiveness</h3>
+        <ul class="mini">
+          <li>Performance & talent management</li>
+          <li>Organizational health & wellness</li>
+          <li>Culture and change management</li>
+          <li>Strategic planning & process improvement</li>
+        </ul>
+        <p class="outcome">Outcome: Alignment, trust, and sustainable performance across teams and stakeholders.</p>
         <span class="card-cta">Learn more →</span>
       </a>
 
-      <!-- 3: Learning & Development -->
-      <a class="card" href="services.html#learning">
-        <div class="card-icon" aria-hidden="true">
-          <!-- graduation-cap SVG -->
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 3 1 8l11 5 9-4.09V17h2V8z"/><path d="M7 12v5c0 .55 2.24 2 5 2s5-1.45 5-2v-5"/></svg>
-        </div>
+      <!-- Learning & Capacity Building -->
+      <a class="card" href="/services.html#learning">
         <h3>Learning & Capacity Building</h3>
-        <p>Workshops, coaching, and manager toolkits that stick—measured with pre/post skill and behavior change.</p>
+        <ul class="mini">
+          <li>Training & curriculum design</li>
+          <li>Workshops and blended learning</li>
+          <li>Leadership & executive development</li>
+          <li>Building evaluation & research capacity</li>
+        </ul>
+        <p class="outcome">Outcome: Learning that sticks, leaders who thrive, and organizations ready for tomorrow.</p>
         <span class="card-cta">Learn more →</span>
       </a>
 
-      <!-- 4: Recruitment & Selection -->
-      <a class="card" href="services.html#selection">
-        <div class="card-icon" aria-hidden="true">
-          <!-- checklist SVG -->
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M9 11l3 3 5-6"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
-        </div>
-        <h3>Recruitment & Selection</h3>
-        <p>Structured interviews, job analyses, adverse-impact checks, candidate experience, and onboarding.</p>
-        <span class="card-cta">Learn more →</span>
-      </a>
-
-      <!-- 5: Leadership & Team Development -->
-      <a class="card" href="services.html#leadership">
-        <div class="card-icon" aria-hidden="true">
-          <!-- users SVG -->
-          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/><path d="M3 21a8 8 0 0 1 18 0"/></svg>
-        </div>
-        <h3>Leadership & Teams</h3>
-        <p>Team resets, decision-making frameworks, and leadership labs tailored for regulated and high-stakes work.</p>
+      <!-- Talent & Recruitment -->
+      <a class="card" href="/services.html#talent">
+        <h3>Talent & Recruitment</h3>
+        <ul class="mini">
+          <li>Job analyses & structured interviews</li>
+          <li>Assessment design & validation</li>
+          <li>Recruitment process evaluation</li>
+        </ul>
+        <p class="outcome">Outcome: Better hires—faster and more fairly.</p>
         <span class="card-cta">Learn more →</span>
       </a>
     </div>
   </section>
 
-  <!-- =================== WORK STRIP =================== -->
-  <section id="work" class="work-strip">
-    <div class="container">
-      <h2>Recent work & sectors</h2>
-      <div class="work-grid">
-        <article class="work">
-          <img src="assets/img/construction-2.jpg" alt="Safety huddle on a construction site" />
-          <div class="work-txt">
-            <h3>Workforce & Safety</h3>
-            <p>Diagnostics and training impact for field operations; rapid surveys and focus groups to surface barriers to safe, efficient work.</p>
-          </div>
-        </article>
-        <article class="work">
-          <img src="assets/img/healthcare-1.jpg" alt="Clinical team discussion" />
-          <div class="work-txt">
-            <h3>Healthcare</h3>
-            <p>Frontline experience mapping and leadership development with measurable changes in unit-level outcomes.</p>
-          </div>
-        </article>
-        <article class="work">
-          <img src="assets/img/farm-1.jpg" alt="Rural community conversation" />
-          <div class="work-txt">
-            <h3>Nonprofit & Community</h3>
-            <p>Spanish-language interviews, mixed-methods evaluation, and stakeholder engagement for community programs.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- =================== CONTACT =================== -->
+  <!-- CONTACT -->
   <section id="contact" class="container pad-y">
     <h2>Start a conversation</h2>
     <p class="lead">Tell us your goals. We’ll respond within 1–2 business days.</p>
-
     <form class="contact" method="post" action="mailto:hello@oxresearch.org" enctype="text/plain">
-      <div class="fld"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
-      <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
-      <div class="fld"><label for="org">Organization (optional)</label><input id="org" name="organization" type="text" /></div>
+      <div class="fld"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
+      <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+      <div class="fld"><label for="org">Organization (optional)</label><input id="org" name="organization" type="text"></div>
       <div class="fld full"><label for="msg">How can we help?</label><textarea id="msg" name="message" rows="5" required></textarea></div>
       <button class="btn btn-primary" type="submit">Send</button>
       <a class="btn btn-ghost" href="mailto:hello@oxresearch.org">Email instead</a>
@@ -164,24 +151,24 @@
     </form>
   </section>
 
-  <!-- =================== FOOTER =================== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container foot">
       <div class="foot-brand">
-        <img src="assets/img/ox-logo.png" alt="" />
-        <span>Ox Research</span>
+        <img src="/assets/img/ox-wordmark.png" alt="Ox Research" />
       </div>
       <nav aria-label="Footer">
         <a href="/">Home</a>
-        <a href="services.html">Services</a>
+        <a href="/services.html">Services</a>
         <a href="#contact">Contact</a>
       </nav>
-      <small>© <span id="year"></span> Ox Research • Evidence-based, human-centered</small>
+      <small>© <span id="year"></span> Ox Research</small>
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script defer src="/js/app.js"></script>
 </body>
 </html>
+
 
 
