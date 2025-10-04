@@ -208,32 +208,8 @@
     </div>
   </footer>
 
-  <!-- tiny inline script so you don't need a separate JS file -->
-  <script>
-    // Mobile nav
-    const header = document.querySelector('.nav');
-    const toggle = document.querySelector('.nav-toggle');
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        const open = header.classList.toggle('open');
-        toggle.setAttribute('aria-expanded', String(open));
-      });
-    }
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+<script defer src="/js/app.js"></script>
 
-    // Carousel (snap 100% per slide; prevents half-stops)
-    const track = document.querySelector('.car-track');
-    const slides = Array.from(document.querySelectorAll('.slide'));
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-    let idx = 0, timer;
-    function go(i){ idx = (i + slides.length) % slides.length; track.style.transform = `translateX(-${idx*100}%)`; restart(); }
-    function restart(){ clearInterval(timer); timer = setInterval(()=>go(idx+1), 7000); }
-    prev?.addEventListener('click', ()=>go(idx-1));
-    next?.addEventListener('click', ()=>go(idx+1));
-    restart();
-  </script>
 </body>
 </html>
 
