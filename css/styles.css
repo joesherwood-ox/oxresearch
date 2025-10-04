@@ -101,16 +101,24 @@ a{color:inherit}
 @media (max-width:560px){ .cards{ grid-template-columns:1fr } }
 
 .card{
+  display:grid;
+  grid-template-rows: auto auto 1fr auto auto;  /* icon | title | list (flex) | outcome | CTA */
+  gap:8px;
   background:var(--panel); border:1px solid var(--line); border-top:3px solid var(--brand);
   padding:18px; border-radius:16px; text-decoration:none; color:inherit;
-  display:flex; flex-direction:column; gap:8px; box-shadow:0 1px 0 rgba(0,0,0,.02);
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
 }
 .card:hover{ box-shadow:0 8px 24px rgba(0,0,0,.08) }
+.card h3{ margin:4px 0 2px; font-size:18px; align-self:start }
+.mini{ margin:2px 0 6px 0; padding-left:0 }
+.mini li{ list-style:none; position:relative; padding-left:18px; margin:4px 0; color:#2b4953; }
+.mini li::before{ content:""; position:absolute; left:0; top:.6em; width:8px; height:8px; border-radius:50%; background:var(--brand); }
+.outcome{ color:#2b4953; margin:6px 0 0; align-self:end }
+.card-cta{ margin-top:0; align-self:end; color:#2b4953; font-weight:700 } /* bolded */
 .card-icon{
   width:40px; height:40px; border-radius:12px; display:grid; place-items:center;
-  background:rgba(0,229,239,.12); color:#00b8c0;
+  background:rgba(0,253,255,.12); color:#10A8A9;  /* uses new brand colors */
 }
-.card h3{ margin:4px 0 2px; font-size:18px }
 
 .mini{ margin:2px 0 6px 0; padding-left:0 }
 .mini li{
