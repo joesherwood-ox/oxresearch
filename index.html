@@ -1,162 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ox Research | Research & Insights, Organizational Effectiveness</title>
-  <meta name="description" content="Independent, applied research for programs, markets, and communities—plus organizational effectiveness and learning. Evidence-based and human-centered." />
-
-  <!-- Favicons -->
-  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/assets/brand/favicon-16.png" sizes="16x16" />
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
-  <!-- Site CSS -->
-  <link rel="stylesheet" href="/style.css" />
+  <title>Ox Research | Evaluation, Org Performance, L&D, Selection</title>
+  <meta name="description" content="Evidence-based evaluation and organizational performance for mission-driven teams. Surveys, analytics, training, selection, and leadership development." />
+  <link rel="icon" href="assets/img/ox-favicon.png" sizes="32x32" />
+  <link rel="preload" as="image" href="assets/img/office-analytics.jpg" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-<header class="site-header" role="banner">
-  <div class="container nav-wrap">
-    <a class="brand" href="/" aria-label="Ox Research — Home">
-      <img src="/assets/brand/logo_full.svg" class="logo" alt="Ox Research logo" />
+  <!-- =================== NAV =================== -->
+  <header class="nav">
+    <a class="brand" href="/">
+      <img src="assets/img/ox-logo.png" alt="Ox Research logo mark" class="brand-mark" />
+      <img src="assets/img/ox-wordmark.png" alt="Ox Research wordmark" class="brand-word" />
     </a>
-    <nav class="nav" role="navigation" aria-label="Primary">
-      <a href="/" class="nav-link is-active">Home</a>
-      <a href="/services.html" class="nav-link">Services</a>
-      <a href="/about.html" class="nav-link">About</a>
-      <a href="/contact.html" class="nav-link btn btn-small">Contact</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/">Home</a>
+      <a href="services.html">Services</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<main id="main" class="main" role="main">
-
-  <!-- HERO -->
-  <section class="hero" aria-label="Hero">
-    <div class="hero-media" role="img" aria-label="People collaborating in a modern workspace"></div>
-    <div class="container hero-inner">
-      <h1 class="display">Evidence-Based Research. Human-Centered Results.</h1>
-      <p class="lead">
-        We design and execute independent research—program, policy, market, and public insights—then help organizations
-        turn findings into action through clear strategy and practical implementation.
+  <!-- =================== HERO =================== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner container">
+      <h1>Evaluation that leaders can act on.</h1>
+      <p class="sub">
+        We help mission-driven orgs measure impact, align performance systems, and build manager capability—so resources turn into outcomes.
       </p>
-      <div class="hero-ctas">
-        <a href="/contact.html" class="btn btn-primary">Start a project</a>
-        <a href="/services.html" class="btn btn-ghost">Explore services</a>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#contact">Book a 20-min scoping call</a>
+        <a class="btn btn-ghost" href="services.html">Explore services</a>
+      </div>
+      <div class="proof">
+        Trusted across federal, nonprofit, health, and education.
       </div>
     </div>
-  </section>
-
-  <!-- TRUST STRIP (optional logos later) -->
-  <section class="strip">
-    <div class="container strip-inner">
-      <span class="strip-kicker">Trusted for rigorous, applied work</span>
-      <span class="strip-dots"></span>
-    </div>
-  </section>
-
-  <!-- WHAT WE DO -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">What We Do</h2>
-
-      <div class="cards">
-        <article class="card">
-          <img class="card-icon" src="/assets/icons/research_insights.svg" alt="" />
-          <h3>Research &amp; Insights</h3>
-          <p>Program &amp; policy evaluation, market &amp; public opinion research, mixed-methods studies, analysis &amp; visualization.</p>
-          <a class="card-link" href="/services.html#research">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-        </article>
-
-        <article class="card">
-          <img class="card-icon" src="/assets/icons/org_effectiveness.svg" alt="" />
-          <h3>Organizational Effectiveness</h3>
-          <p>Performance &amp; talent systems, culture &amp; change, strategy &amp; operating rhythm, practical implementation.</p>
-          <a class="card-link" href="/services.html#org">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-        </article>
-
-        <article class="card">
-          <img class="card-icon" src="/assets/icons/learning_capacity.svg" alt="" />
-          <h3>Learning &amp; Capacity Building</h3>
-          <p>Training design, workshops, leadership pathways, and building evaluation capacity across teams.</p>
-          <a class="card-link" href="/services.html#learning">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-        </article>
-
-        <article class="card">
-          <img class="card-icon" src="/assets/icons/talent_recruitment.svg" alt="" />
-          <h3>Talent &amp; Recruitment</h3>
-          <p>Evidence-based hiring: job analysis, structured interviews, work samples—kept here for SEO &amp; specialist needs.</p>
-          <a class="card-link" href="/services.html#talent">Learn more <i class="fa-solid fa-arrow-right"></i></a>
-        </article>
+    <!-- simple, dependency-free carousel -->
+    <div class="carousel" aria-label="Sector photos">
+      <button class="car-btn prev" aria-label="Previous slide">‹</button>
+      <div class="car-track">
+        <figure class="slide current"><img src="assets/img/office-analytics.jpg" alt="Team reviewing analytics" /></figure>
+        <figure class="slide"><img src="assets/img/healthcare-1.jpg" alt="Healthcare team in discussion" /></figure>
+        <figure class="slide"><img src="assets/img/construction-1.jpg" alt="Construction supervisors onsite" /></figure>
+        <figure class="slide"><img src="assets/img/farm-1.jpg" alt="Rural stakeholders in conversation" /></figure>
+        <figure class="slide"><img src="assets/img/nonprofit-1.jpg" alt="Nonprofit team meeting" /></figure>
       </div>
+      <button class="car-btn next" aria-label="Next slide">›</button>
     </div>
   </section>
 
-  <!-- CAROUSEL (simple, no JS) -->
-  <section class="section section--alt" aria-label="Recent work visuals">
-    <div class="container">
-      <h2 class="section-title">Research in Action</h2>
+  <!-- =================== SERVICES =================== -->
+  <section id="services" class="container pad-y">
+    <h2>What we do</h2>
+    <p class="lead">Five core offerings—available as standalone projects or integrated programs.</p>
 
-      <div class="carousel">
-        <input type="radio" name="c" id="c1" checked>
-        <input type="radio" name="c" id="c2">
-        <input type="radio" name="c" id="c3">
-
-        <div class="slides">
-          <figure class="slide" style="background-image:url('/assets/photos/carousel-1.jpg')">
-            <figcaption>Interviews, surveys, and focus groups—translated insights for executives and communities.</figcaption>
-          </figure>
-          <figure class="slide" style="background-image:url('/assets/photos/carousel-2.jpg')">
-            <figcaption>Dashboards and briefings that turn data into decisions.</figcaption>
-          </figure>
-          <figure class="slide" style="background-image:url('/assets/photos/carousel-3.jpg')">
-            <figcaption>Workshops and working sessions that move plans into practice.</figcaption>
-          </figure>
+    <div class="grid cards">
+      <!-- 1: Research & Program Evaluation -->
+      <a class="card" href="services.html#evaluation">
+        <div class="card-icon" aria-hidden="true">
+          <!-- pie-chart SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M11 2a1 1 0 0 1 1 1v9h9a1 1 0 0 1 1 1 10 10 0 1 1-11-11z"/><path d="M13 2.05A10 10 0 0 1 21.95 11H13z"/></svg>
         </div>
+        <h3>Research & Program Evaluation</h3>
+        <p>Logic models, survey design (EN/ES), mixed-methods, dashboards, and decision-ready exec summaries.</p>
+        <span class="card-cta">Learn more →</span>
+      </a>
 
-        <div class="dots">
-          <label for="c1"></label>
-          <label for="c2"></label>
-          <label for="c3"></label>
+      <!-- 2: Organizational Performance -->
+      <a class="card" href="services.html#org-performance">
+        <div class="card-icon" aria-hidden="true">
+          <!-- sliders SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M21 7H10M4 7H3M21 17H14M8 17H3M7 7v10M15 17V7"/></svg>
         </div>
+        <h3>Organizational Performance</h3>
+        <p>OKRs, performance diagnostics, process improvement, and change management in complex environments.</p>
+        <span class="card-cta">Learn more →</span>
+      </a>
+
+      <!-- 3: Learning & Development -->
+      <a class="card" href="services.html#learning">
+        <div class="card-icon" aria-hidden="true">
+          <!-- graduation-cap SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 3 1 8l11 5 9-4.09V17h2V8z"/><path d="M7 12v5c0 .55 2.24 2 5 2s5-1.45 5-2v-5"/></svg>
+        </div>
+        <h3>Learning & Capacity Building</h3>
+        <p>Workshops, coaching, and manager toolkits that stick—measured with pre/post skill and behavior change.</p>
+        <span class="card-cta">Learn more →</span>
+      </a>
+
+      <!-- 4: Recruitment & Selection -->
+      <a class="card" href="services.html#selection">
+        <div class="card-icon" aria-hidden="true">
+          <!-- checklist SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M9 11l3 3 5-6"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        </div>
+        <h3>Recruitment & Selection</h3>
+        <p>Structured interviews, job analyses, adverse-impact checks, candidate experience, and onboarding.</p>
+        <span class="card-cta">Learn more →</span>
+      </a>
+
+      <!-- 5: Leadership & Team Development -->
+      <a class="card" href="services.html#leadership">
+        <div class="card-icon" aria-hidden="true">
+          <!-- users SVG -->
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M16 11a4 4 0 1 0-8 0 4 4 0 0 0 8 0z"/><path d="M3 21a8 8 0 0 1 18 0"/></svg>
+        </div>
+        <h3>Leadership & Teams</h3>
+        <p>Team resets, decision-making frameworks, and leadership labs tailored for regulated and high-stakes work.</p>
+        <span class="card-cta">Learn more →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- =================== WORK STRIP =================== -->
+  <section id="work" class="work-strip">
+    <div class="container">
+      <h2>Recent work & sectors</h2>
+      <div class="work-grid">
+        <article class="work">
+          <img src="assets/img/construction-2.jpg" alt="Safety huddle on a construction site" />
+          <div class="work-txt">
+            <h3>Workforce & Safety</h3>
+            <p>Diagnostics and training impact for field operations; rapid surveys and focus groups to surface barriers to safe, efficient work.</p>
+          </div>
+        </article>
+        <article class="work">
+          <img src="assets/img/healthcare-1.jpg" alt="Clinical team discussion" />
+          <div class="work-txt">
+            <h3>Healthcare</h3>
+            <p>Frontline experience mapping and leadership development with measurable changes in unit-level outcomes.</p>
+          </div>
+        </article>
+        <article class="work">
+          <img src="assets/img/farm-1.jpg" alt="Rural community conversation" />
+          <div class="work-txt">
+            <h3>Nonprofit & Community</h3>
+            <p>Spanish-language interviews, mixed-methods evaluation, and stakeholder engagement for community programs.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
-    <div class="container cta-inner">
-      <h2>Ready to put research to work?</h2>
-      <p>Tell us your question. We’ll design the study, gather evidence, and deliver clear recommendations you can act on.</p>
-      <a href="/contact.html" class="btn btn-primary btn-lg">Schedule a conversation</a>
-    </div>
+  <!-- =================== CONTACT =================== -->
+  <section id="contact" class="container pad-y">
+    <h2>Start a conversation</h2>
+    <p class="lead">Tell us your goals. We’ll respond within 1–2 business days.</p>
+
+    <form class="contact" method="post" action="mailto:hello@oxresearch.org" enctype="text/plain">
+      <div class="fld"><label for="name">Name</label><input id="name" name="name" type="text" required /></div>
+      <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" required /></div>
+      <div class="fld"><label for="org">Organization (optional)</label><input id="org" name="organization" type="text" /></div>
+      <div class="fld full"><label for="msg">How can we help?</label><textarea id="msg" name="message" rows="5" required></textarea></div>
+      <button class="btn btn-primary" type="submit">Send</button>
+      <a class="btn btn-ghost" href="mailto:hello@oxresearch.org">Email instead</a>
+      <p class="privacy">We only use your information to respond. We never sell or share it.</p>
+    </form>
   </section>
 
-</main>
-
-<footer class="site-footer" role="contentinfo">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="/assets/brand/logo_full.svg" alt="Ox Research" class="logo-foot" />
-      <div class="footer-motto">Evidence-Based. Human-Centered.</div>
+  <!-- =================== FOOTER =================== -->
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-brand">
+        <img src="assets/img/ox-logo.png" alt="" />
+        <span>Ox Research</span>
+      </div>
+      <nav aria-label="Footer">
+        <a href="/">Home</a>
+        <a href="services.html">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <small>© <span id="year"></span> Ox Research • Evidence-based, human-centered</small>
     </div>
-    <nav class="footer-links" aria-label="Footer">
-      <a href="/services.html">Services</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-    </nav>
-  </div>
-  <div class="container copyright">© Ox Research</div>
-</footer>
+  </footer>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
+
 
