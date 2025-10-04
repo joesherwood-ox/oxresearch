@@ -4,8 +4,10 @@
   --panel:#ffffff;
   --ink:#0d1b22;
   --muted:#546e7a;
-  --brand:#00e5ef;   /* cyan accent */
-  --brand-d:#00c2cb;
+  --brand:#00FDFF;     /* cyan */
+  --brand-d:#10A8A9;   /* teal */
+  --brand-deep:#0B1579;/* ocean blue */
+
   --line:#e3edf2;
 }
 
