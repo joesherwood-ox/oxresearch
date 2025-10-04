@@ -3,189 +3,160 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ox Research | Program Evaluation & Organizational Performance</title>
-  <meta name="description" content="Ox Research partners with mission-driven organizations to evaluate programs, strengthen organizational performance, and develop people—so resources create measurable outcomes." />
+  <title>Ox Research | Research & Insights, Organizational Effectiveness</title>
+  <meta name="description" content="Independent, applied research for programs, markets, and communities—plus organizational effectiveness and learning. Evidence-based and human-centered." />
 
   <!-- Favicons -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="icon" href="/assets/brand/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/assets/brand/favicon-16.png" sizes="16x16" />
 
-  <!-- Global site CSS (absolute path so it always loads) -->
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Site CSS -->
   <link rel="stylesheet" href="/style.css" />
-
-  <!-- Home-page-only animation styles -->
-  <style>
-    /* ===== OX logo one-time intro (home page) ===== */
-    .brand-anim{ position:relative; display:inline-block; }
-    .brand-anim .logo{ display:block; }
-    .logo-anim-ovl{ position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
-    .logo-motto{ position:absolute; left:calc(50% + 40px); bottom:-6px; font-weight:600; color:var(--muted,#5a6672); transform:translateX(-18px); opacity:0; white-space:nowrap; }
-    @keyframes xToGrid{from{transform:translate(120px,40px) rotate(45deg)}60%{transform:translate(120px,40px) rotate(0)}to{transform:translate(120px,40px) rotate(0)}}
-    @keyframes graphDraw{0%{opacity:0;stroke-dasharray:0 400}15%{opacity:1}100%{opacity:1;stroke-dasharray:200 200}}
-    @keyframes mottoSlide{from{transform:translateX(-18px);opacity:0}to{transform:translateX(0);opacity:1}}
-    @keyframes snapBounce{0%{transform:scale(1)}40%{transform:scale(1.06)}100%{transform:scale(1)}}
-    .brand-anim.animating #x-mark{animation:xToGrid 900ms cubic-bezier(.2,.7,.2,1) forwards}
-    .brand-anim.animating #graph{animation:graphDraw 900ms 150ms ease-out forwards}
-    .brand-anim.animating #o-teal{transition:stroke-dasharray 900ms ease,stroke-dashoffset 900ms ease}
-    .brand-anim.animating #o-blue{transition:stroke-dasharray 600ms ease 350ms,stroke-dashoffset 600ms ease 350ms}
-    .brand-anim.animating #motto{animation:mottoSlide 500ms 1050ms ease forwards}
-    .brand-anim.reversing{animation:snapBounce 260ms ease-out}
-    .brand-anim.hidden-ovl .logo-anim-ovl{opacity:0}
-    @media (prefers-reduced-motion:reduce){
-      .brand-anim.animating #x-mark,.brand-anim.animating #graph,.brand-anim.animating #o-teal,.brand-anim.animating #o-blue,.brand-anim.animating #motto{animation:none!important;transition:none!important}
-      .logo-motto{opacity:1;transform:none}
-      .logo-anim-ovl{display:none}
-    }
-  </style>
 </head>
 <body>
-  <!-- ================= Header ================= -->
-  <header class="site-header" role="banner">
-    <div class="container nav-wrap">
-      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
+
+<header class="site-header" role="banner">
+  <div class="container nav-wrap">
+    <a class="brand" href="/" aria-label="Ox Research — Home">
+      <img src="/assets/brand/logo_full.svg" class="logo" alt="Ox Research logo" />
     </a>
     <nav class="nav" role="navigation" aria-label="Primary">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="/surveys/" class="nav-link">Surveys</a>
-      <a href="research.html" class="nav-link">Research</a>
-      <a href="courses.html" class="nav-link">Courses</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="/" class="nav-link is-active">Home</a>
+      <a href="/services.html" class="nav-link">Services</a>
+      <a href="/about.html" class="nav-link">About</a>
+      <a href="/contact.html" class="nav-link btn btn-small">Contact</a>
     </nav>
   </div>
 </header>
 
-  <!-- ================= Hero ================= -->
-  <section class="hero" role="region" aria-label="Hero">
+<main id="main" class="main" role="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-media" role="img" aria-label="People collaborating in a modern workspace"></div>
     <div class="container hero-inner">
-      <h1 class="display">Evidence-Based Research. Real-World Impact.</h1>
+      <h1 class="display">Evidence-Based Research. Human-Centered Results.</h1>
       <p class="lead">
-        Ox Research partners with mission-driven organizations to evaluate programs,
-        strengthen organizational performance, and develop people—so resources
-        create measurable outcomes.
+        We design and execute independent research—program, policy, market, and public insights—then help organizations
+        turn findings into action through clear strategy and practical implementation.
       </p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary">Work With Us</a>
-        <a href="services.html" class="btn btn-ghost">Explore Services</a>
+      <div class="hero-ctas">
+        <a href="/contact.html" class="btn btn-primary">Start a project</a>
+        <a href="/services.html" class="btn btn-ghost">Explore services</a>
       </div>
     </div>
   </section>
 
-  <!-- ================= What We Do ================= -->
-  <main id="main" class="site-main" role="main">
-    <section class="section">
-      <div class="container">
-        <h2>What We Do</h2>
+  <!-- TRUST STRIP (optional logos later) -->
+  <section class="strip">
+    <div class="container strip-inner">
+      <span class="strip-kicker">Trusted for rigorous, applied work</span>
+      <span class="strip-dots"></span>
+    </div>
+  </section>
 
-        <div class="card-grid">
-          <article class="card">
-            <div class="card-icn">📈</div>
-            <h3>Research &amp; Program Evaluation</h3>
-            <p>Measure impact with mixed-methods studies and clear, actionable findings.</p>
-          </article>
+  <!-- WHAT WE DO -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">What We Do</h2>
 
-          <article class="card">
-            <div class="card-icn">⚙️</div>
-            <h3>Organizational Performance</h3>
-            <p>Align goals, feedback, decisions, HRIS systems, and change management—leveraging knowledge management and responsible AI.</p>
-          </article>
+      <div class="cards">
+        <article class="card">
+          <img class="card-icon" src="/assets/icons/research_insights.svg" alt="" />
+          <h3>Research &amp; Insights</h3>
+          <p>Program &amp; policy evaluation, market &amp; public opinion research, mixed-methods studies, analysis &amp; visualization.</p>
+          <a class="card-link" href="/services.html#research">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-          <article class="card">
-            <div class="card-icn">🎓</div>
-            <h3>Learning &amp; Development</h3>
-            <p>Build skills with research-driven training that sticks.</p>
-          </article>
+        <article class="card">
+          <img class="card-icon" src="/assets/icons/org_effectiveness.svg" alt="" />
+          <h3>Organizational Effectiveness</h3>
+          <p>Performance &amp; talent systems, culture &amp; change, strategy &amp; operating rhythm, practical implementation.</p>
+          <a class="card-link" href="/services.html#org">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-          <article class="card">
-            <div class="card-icn">🧩</div>
-            <h3>Recruitment &amp; Selection</h3>
-            <p>Hire smarter with valid, fair, evidence-based assessments.</p>
-          </article>
+        <article class="card">
+          <img class="card-icon" src="/assets/icons/learning_capacity.svg" alt="" />
+          <h3>Learning &amp; Capacity Building</h3>
+          <p>Training design, workshops, leadership pathways, and building evaluation capacity across teams.</p>
+          <a class="card-link" href="/services.html#learning">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
 
-          <article class="card">
-            <div class="card-icn">🤝</div>
-            <h3>Leadership &amp; Team Building</h3>
-            <p>Elevate decision-making, communication, and trust across teams.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ================= Footer ================= -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="logo_full.png" alt="Ox Research" class="logo-foot" />
-        <div class="footer-motto">Moving forward.</div>
-      </div>
-      <div class="footer-links">
-        <a href="services.html">Services</a>
-        <a href="research.html">Research</a>
-        <a href="courses.html">Courses</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <article class="card">
+          <img class="card-icon" src="/assets/icons/talent_recruitment.svg" alt="" />
+          <h3>Talent &amp; Recruitment</h3>
+          <p>Evidence-based hiring: job analysis, structured interviews, work samples—kept here for SEO &amp; specialist needs.</p>
+          <a class="card-link" href="/services.html#talent">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
       </div>
     </div>
-    <div class="container copyright">© Ox Research</div>
-  </footer>
+  </section>
 
-  <!-- One-time OX → graph animation (runs after DOM is ready) -->
-  <script>
-    (function(){
-      const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const wrap = document.getElementById('brandAnim');
-      if(!wrap) return;
+  <!-- CAROUSEL (simple, no JS) -->
+  <section class="section section--alt" aria-label="Recent work visuals">
+    <div class="container">
+      <h2 class="section-title">Research in Action</h2>
 
-      // Only run once per visitor
-      try { if(localStorage.getItem('oxIntroDone')) return; } catch(e){}
+      <div class="carousel">
+        <input type="radio" name="c" id="c1" checked>
+        <input type="radio" name="c" id="c2">
+        <input type="radio" name="c" id="c3">
 
-      if(reduce){
-        try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
-        return;
-      }
+        <div class="slides">
+          <figure class="slide" style="background-image:url('/assets/photos/carousel-1.jpg')">
+            <figcaption>Interviews, surveys, and focus groups—translated insights for executives and communities.</figcaption>
+          </figure>
+          <figure class="slide" style="background-image:url('/assets/photos/carousel-2.jpg')">
+            <figcaption>Dashboards and briefings that turn data into decisions.</figcaption>
+          </figure>
+          <figure class="slide" style="background-image:url('/assets/photos/carousel-3.jpg')">
+            <figcaption>Workshops and working sessions that move plans into practice.</figcaption>
+          </figure>
+        </div>
 
-      const teal  = document.getElementById('o-teal');
-      const blue  = document.getElementById('o-blue');
-      const R = 26, C = 2*Math.PI*R;
+        <div class="dots">
+          <label for="c1"></label>
+          <label for="c2"></label>
+          <label for="c3"></label>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      // Start: bottom half teal (180°), top half black
-      teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
-      teal.setAttribute('stroke-dashoffset', -(C/2));
-      blue.setAttribute('stroke-dasharray', '0 '+C);  // blue slice hidden
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <h2>Ready to put research to work?</h2>
+      <p>Tell us your question. We’ll design the study, gather evidence, and deliver clear recommendations you can act on.</p>
+      <a href="/contact.html" class="btn btn-primary btn-lg">Schedule a conversation</a>
+    </div>
+  </section>
 
-      // Kick off CSS animations (X rotation + graph draw + motto slide)
-      wrap.classList.add('animating');
+</main>
 
-      // Grow teal to ~66% and add ~10% blue slice (sequenced via transitions)
-      requestAnimationFrame(()=>{
-        const tealLen = 0.66 * C;
-        const blueLen = 0.10 * C;
-        teal.setAttribute('stroke-dasharray', tealLen+' '+C);
-        teal.setAttribute('stroke-dashoffset', -(C/2));
-        blue.setAttribute('stroke-dasharray', blueLen+' '+C);
-        blue.setAttribute('stroke-dashoffset', -(C/2) - tealLen);
-      });
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <img src="/assets/brand/logo_full.svg" alt="Ox Research" class="logo-foot" />
+      <div class="footer-motto">Evidence-Based. Human-Centered.</div>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="/services.html">Services</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy.html">Privacy</a>
+    </nav>
+  </div>
+  <div class="container copyright">© Ox Research</div>
+</footer>
 
-      // After motto appears, snap back quickly and hide overlay so PNG remains
-      setTimeout(()=>{
-        wrap.classList.remove('animating');
-        wrap.classList.add('reversing');
-
-        // Reset ring back to half teal
-        teal.setAttribute('stroke-dasharray', (C/2)+' '+C);
-        teal.setAttribute('stroke-dashoffset', -(C/2));
-        blue.setAttribute('stroke-dasharray', '0 '+C);
-
-        setTimeout(()=>{
-          wrap.classList.remove('reversing');
-          wrap.classList.add('hidden-ovl');   // overlay fades; static PNG remains
-          try{ localStorage.setItem('oxIntroDone','1'); }catch(e){}
-        }, 280);
-      }, 1350); // ~900ms (X/graph) + ~450ms (motto)
-    })();
-  </script>
 </body>
 </html>
+
