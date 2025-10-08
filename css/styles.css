@@ -52,7 +52,7 @@ a{color:inherit}
   border-bottom:1px solid var(--line);
 }
 .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; padding:2px 0; }
-.brand-word{ display:block; height:208px; width:auto; max-width:1440px; } /* bigger logo */
+.brand-word{ display:block; height:104px; width:auto; max-width:720px; } /* bigger logo */
 .nav-links{ display:flex; gap:22px }
 .nav a{ color:var(--muted); text-decoration:none }
 .nav a:hover{ color:var(--ink) }
