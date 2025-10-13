@@ -27,16 +27,13 @@
   let idx = 0, timer;
 
   function slideWidth() {
-    // width of a single slide in pixels (no rounding issues)
     return slides[0].getBoundingClientRect().width;
   }
-
   function go(i) {
     idx = (i + slides.length) % slides.length;
     track.style.transform = `translateX(-${idx * slideWidth()}px)`;
     restart();
   }
-
   function restart() { clearInterval(timer); timer = setInterval(() => go(idx + 1), 7000); }
   function pause() { clearInterval(timer); }
 
@@ -48,9 +45,9 @@
     carousel.addEventListener('mouseenter', pause);
     carousel.addEventListener('mouseleave', restart);
   }
-  window.addEventListener('resize', () => go(idx)); // keep alignment on resize
-
+  window.addEventListener('resize', () => go(idx));
   go(0);
 })();
+
 
 
