@@ -2,8 +2,8 @@
 :root{
   --indigo:#161759; --cyan:#00FDFF; --teal:#00A7A8;
   --ink:#eaf6f7; --muted:#b7d8db; --line:#1a2127; --bg:#0b0f12;
-  --wrap:1400px;       /* wider header/body container */
-  --wrap-wide:1560px;  /* extra-wide option if needed elsewhere */
+  --wrap:1640px;       /* wider header/body container */
+  --wrap-wide:1760px;  /* extra-wide option if needed elsewhere */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
@@ -15,8 +15,8 @@ html,body{
 }
 
 /* containers */
-.container{max-width:var(--wrap);margin:0 auto;padding:0 28px} /* smaller side padding to push content outward */
-.container-wide{max-width:var(--wrap-wide);margin:0 auto;padding:0 28px}
+.container{max-width:var(--wrap);margin:0 auto;padding:0 20px} /* smaller side padding to push content outward */
+.container-wide{max-width:var(--wrap-wide);margin:0 auto;padding:0 20px}
 .pad-y{padding:80px 0}
 
 /* =================== HEADER =================== */
@@ -29,7 +29,7 @@ html,body{
 .nav-inner{
   max-width:var(--wrap);
   margin:0 auto;
-  padding:18px 28px;                         /* slightly tighter than v3 to shift logo left */
+  padding:18px 20px;                         /* slightly tighter than v3 to shift logo left */
   display:flex; align-items:center; justify-content:space-between;
 }
 .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
@@ -56,7 +56,7 @@ html,body{
 .hero-content .container{width:100%; display:flex; align-items:center}
 
 /* Left-aligned hero copy; slightly smaller than v3 */
-.hero-text{ text-align:left; color:#fff; max-width:1040px } /* allow wide single-line text */
+.hero-text{ text-align:left; color:#fff; max-width:1280px } /* allow wide single-line text */
 .hero-text h1{
   margin:0 0 18px;
   font-weight:800;
