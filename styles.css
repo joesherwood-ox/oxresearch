@@ -89,24 +89,24 @@ html,body{
 
 /* =================== HIGHLIGHTED SERVICES BAR =================== */
 .service-bar{
-  background:var(--indigo);        /* Deep Marine Blue */
-  color:#fff;
+  background:#fff;
+  color:#000;
   border-bottom:1px solid rgba(255,255,255,.08);
-  line-height:1;                    /* keep it compact */
+  line-height:1;
 }
 .service-bar-inner{
-  max-width:var(--wrap-header);     /* match header width */
+  max-width:var(--wrap-header);
   margin:0 auto;
-  padding:12px 20px;                /* thin bar; adjust to taste */
+  padding:10px 20px;
 }
 .service-list{
   list-style:none;
   display:flex; flex-wrap:wrap;
   align-items:center; justify-content:center;
-  gap:8px 12px;
-  font-weight:800;                  /* bold white text */
-  font-size:15px;                   /* subtle, high-density */
-  letter-spacing:.2px;
+  gap:10px 14px;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:.15px;
 }
 .service-list li{ white-space:nowrap }
 .service-list li:not(:last-child)::after{
