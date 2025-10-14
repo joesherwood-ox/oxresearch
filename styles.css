@@ -139,105 +139,134 @@ html,body{
 
 /* =================== WHAT WE DO =================== */
 .whatwedo{
-  background:#fff;                 /* was dark */
-  color:#000;                      /* default text on white */
+  background:#fff;
+  color:#000;
   border-top:1px solid var(--line);
 }
+
 .whatwedo-inner{
-  max-width:var(--wrap-header);    /* stays aligned with services bar */
-  margin:0 auto;
-  padding:48px 20px 56px;
+  /* narrower than header; centered like Qualtrics */
+  max-width: min(1180px, 94vw);
+  margin: 0 auto;
+  padding: 64px 20px 72px;
 }
+
 .whatwedo-title{
-  font-size:40px;
-  font-weight:900;
-  color:#000;                      /* black title */
-  margin:0 0 24px 0;
+  text-align:center;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height:1.1;
+  font-weight: 900;
+  color:#000;
   letter-spacing:.2px;
+  margin: 0 0 28px 0;
 }
 
 .whatwedo-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap:22px;
+  gap: 24px;
 }
 
+/* Cards */
 .wwd-card{
-  background:#fff;                 /* white cards */
-  border:1px solid #E5E7EB;        /* light border on white for subtle definition */
-  border-radius:14px;
-  padding:20px 18px 18px;
-  box-shadow:0 2px 14px rgba(0,0,0,.06);
-}
-
-.wwd-head{
-  display:flex; align-items:center; gap:10px;
-  margin-bottom:8px;
-}
-.wwd-icon{
-  width:30px; height:30px;
-  color:#000;                      /* icons black */
-  flex:0 0 22px;
-}
-.wwd-h3{
-  font-size:28px;
-  font-weight:900;
-  color:var(#000);             /* titles black */
-  margin:0;
-}
-
-.wwd-sub{
-  margin:2px 0 10px 32px;
-  font-weight:800;
-  color:var(#161759);               /* indigo subhead */
-}
-
-.wwd-card p{ margin:0 0 12px 0; line-height:1.55; color:#000 }  /* body copy black */
-
-.wwd-cap-title{
-  margin:6px 0 6px 0;
-  font-weight:900;
-  color:var(#161759);               /* “Core capabilities include:” indigo */
-}
-
-.wwd-caps{
-  list-style:none; padding:0; margin:0;
-  display:flex; flex-wrap:wrap; gap:6px 10px;
-  color:#111;                      /* capability chips dark text */
-}
-.wwd-caps li{
-  white-space:nowrap;
   position:relative;
-  padding-right:14px;
-}
-.wwd-caps li:not(:last-child)::after{
-  content:"•";
-  position:absolute; right:4px; top:0;
-  opacity:.45;
+  background:#fff;
+  border:1px solid #E6E8EB;
+  border-radius:16px;
+  padding:22px 22px 20px;
+  box-shadow:0 6px 24px rgba(0,0,0,.06);
+  overflow:hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-/* Hover affordance on light cards */
+/* top accent strip */
+.wwd-accent{
+  position:absolute; inset:0 0 auto 0; height:4px;
+  background:linear-gradient(90deg, #BFFEFF 0%, #00FDFF 60%, #7DFDFF 100%);
+}
+
+/* optional spot art */
+.wwd-spot{
+  position:absolute; right:-6px; top:-6px;
+  width:180px; max-width:40%;
+  opacity:.18;
+  filter:saturate(105%) contrast(105%);
+  pointer-events:none;
+}
+
+/* header row */
+.wwd-head{ display:flex; align-items:center; gap:12px; margin-bottom:10px; }
+.wwd-icon{ width:26px; height:26px; color:#000; flex:0 0 26px; }
+.wwd-h3{
+  margin:0;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+  color: var(--indigo, #161759);
+  letter-spacing:.2px;
+}
+
+/* subhead + body */
+.wwd-sub{
+  margin: 4px 0 10px 0;
+  font-weight: 900;
+  color: var(--teal, #00A7A8);
+}
+.wwd-card p{ margin:0 0 12px 0; line-height:1.55; color:#000; }
+
+/* capabilities as chips */
+.wwd-cap-title{
+  margin:10px 0 8px 0;
+  font-weight:900;
+  color: var(--teal, #00A7A8);
+}
+.chip-list{
+  --chip-bg:#F6F8FA;
+  --chip-bd:#E6E8EB;
+  list-style:none; padding:0; margin:0;
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.chip-list li{
+  font-size:14px;
+  padding:6px 10px;
+  border:1px solid var(--chip-bd);
+  border-radius:999px;
+  background: var(--chip-bg);
+  white-space:nowrap;
+}
+
+/* CTA row */
+.wwd-cta{ margin-top:14px; }
+.btn-cyan{
+  --grad: linear-gradient(90deg, #BFFEFF 0%, #00FDFF 60%, #7DFDFF 100%);
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(0,0,0,.14);
+  background: var(--grad);
+  color:#000; font-weight:900; text-decoration:none;
+  box-shadow: 0 6px 16px rgba(0,253,255,.25);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-cyan:hover{ transform: translateY(-1px); box-shadow:0 10px 26px rgba(0,253,255,.32) }
+
+/* Hover state on card */
 .wwd-card:hover{
-  border-color:rgba(0,253,255,.35);
-  box-shadow:0 6px 20px rgba(0,0,0,.10);
-  transform:translateY(-1px);
-  transition:.2s ease;
+  border-color: rgba(0,253,255,.35);
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+  transform: translateY(-2px);
 }
 
 /* Responsive */
 @media (max-width:1024px){
-  .whatwedo-grid{ grid-template-columns:1fr 1fr }
+  .whatwedo-inner{ padding: 56px 18px 66px }
+  .whatwedo-grid{ grid-template-columns: 1fr 1fr; gap:18px }
+  .wwd-spot{ width:150px }
 }
 @media (max-width:640px){
-  .whatwedo-inner{ padding:40px 16px 44px }
-  .whatwedo-title{ font-size:24px }
-  .whatwedo-grid{ grid-template-columns:1fr; gap:16px }
-  .wwd-h3{ font-size:17px }
-  .wwd-icon{ width:20px; height:20px }
+  .whatwedo-inner{ padding: 44px 16px 54px }
+  .whatwedo-grid{ grid-template-columns: 1fr; gap:14px }
+  .wwd-spot{ display:none } /* hide spot art on narrow screens */
 }
-
-
-
 
 /* =================== CONTACT =================== */
 .contact{display:grid; grid-template-columns:1fr 1fr; gap:16px; background:#0e1419; border:1px solid var(--line); border-radius:16px; padding:22px}
