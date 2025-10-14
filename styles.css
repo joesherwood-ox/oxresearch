@@ -97,7 +97,7 @@ html,body{
 .service-bar-inner{
   max-width:var(--wrap-header);
   margin:0 auto;
-  padding:10px 20px;
+  padding:20px 20px;
 }
 .service-list{
   list-style:none;
@@ -105,7 +105,7 @@ html,body{
   align-items:center; justify-content:center;
   gap:10px 14px;
   font-weight:800;
-  font-size:15px;
+  font-size:20px;
   letter-spacing:.15px;
 }
 .service-list li{ white-space:nowrap }
@@ -118,10 +118,10 @@ html,body{
 
 /* small screens—tighten slightly */
 @media (max-width:760px){
-  .service-bar-inner{ padding:10px 16px }
-  .service-list{ font-size:14px; gap:6px 10px }
-  .service-list li:not(:last-child)::after{ margin:0 6px 0 10px }
+  .service-bar-inner{ padding:16px 16px }
+  .service-list{ font-size:17px; gap:8px 12px }
 }
+
 
 
 /* =================== MAIN CONTENT =================== */
