@@ -5,7 +5,7 @@
 
   /* widths */
   --wrap:1640px;           /* main BODY width (unchanged) */
-  --wrap-header:1860px;    /* NEW: wider HEADER width */
+  --wrap-header:1940px;    /* NEW: wider HEADER width */
   --wrap-wide:1760px;      /* optional extra-wide sections */
 }
 
