@@ -149,7 +149,7 @@ html,body{
   padding:48px 20px 56px;
 }
 .whatwedo-title{
-  font-size:28px;
+  font-size:40px;
   font-weight:900;
   color:#000;                      /* black title */
   margin:0 0 24px 0;
@@ -175,21 +175,21 @@ html,body{
   margin-bottom:8px;
 }
 .wwd-icon{
-  width:22px; height:22px;
+  width:30px; height:30px;
   color:#000;                      /* icons black */
   flex:0 0 22px;
 }
 .wwd-h3{
-  font-size:18px;
+  font-size:28px;
   font-weight:900;
-  color:var(--indigo);             /* titles indigo (#161759) */
+  color:var(#000);             /* titles black */
   margin:0;
 }
 
 .wwd-sub{
   margin:2px 0 10px 32px;
   font-weight:800;
-  color:var(--teal);               /* teal subhead */
+  color:var(#161759);               /* indigo subhead */
 }
 
 .wwd-card p{ margin:0 0 12px 0; line-height:1.55; color:#000 }  /* body copy black */
@@ -197,7 +197,7 @@ html,body{
 .wwd-cap-title{
   margin:6px 0 6px 0;
   font-weight:900;
-  color:var(--teal);               /* “Core capabilities include:” teal */
+  color:var(#161759);               /* “Core capabilities include:” indigo */
 }
 
 .wwd-caps{
