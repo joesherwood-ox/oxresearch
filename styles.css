@@ -124,7 +124,8 @@ html,body{
 .service-list li:not(:last-child)::after{
   content:"|";
   margin:0 8px 0 12px;
-  color:#00FDFF;                   /* solid cyan for the divider */
+  color:#00FDFF;
+  -webkit-text-fill-color:#00FDFF; /* solid cyan for the divider */
   opacity:.85;
   font-weight:700;
 }
