@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="gradCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#BFFEFF"/>
+      <stop offset="55%" stop-color="#00FDFF"/>
+      <stop offset="100%" stop-color="#00A7A8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="none"/>
+  
+  <!-- Target rings -->
+  <circle cx="360" cy="300" r="140" fill="none" stroke="url(#gradCyan)" stroke-width="10"/>
+  <circle cx="360" cy="300" r="100" fill="none" stroke="url(#gradCyan)" stroke-width="8" opacity="0.7"/>
+  <circle cx="360" cy="300" r="60" fill="none" stroke="url(#gradCyan)" stroke-width="6" opacity="0.5"/>
+  <circle cx="360" cy="300" r="20" fill="url(#gradCyan)"/>
+  
+  <!-- Person nodes connected -->
+  <g stroke="url(#gradCyan)" stroke-width="8" stroke-linecap="round" fill="none">
+    <line x1="360" y1="300" x2="620" y2="220"/>
+    <line x1="360" y1="300" x2="560" y2="420"/>
+  </g>
+  <g fill="#161759">
+    <circle cx="620" cy="220" r="18"/>
+    <rect x="604" y="238" width="32" height="44" rx="10"/>
+    <circle cx="560" cy="420" r="18"/>
+    <rect x="544" y="438" width="32" height="44" rx="10"/>
+  </g>
+</svg>
