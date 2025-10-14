@@ -87,6 +87,43 @@ html,body{
 .btn-ghost:hover{border-color:var(--cyan); color:var(--cyan)}
 .cta-row{display:flex; gap:16px; flex-wrap:wrap}
 
+/* =================== HIGHLIGHTED SERVICES BAR =================== */
+.service-bar{
+  background:var(--indigo);        /* Deep Marine Blue */
+  color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  line-height:1;                    /* keep it compact */
+}
+.service-bar-inner{
+  max-width:var(--wrap-header);     /* match header width */
+  margin:0 auto;
+  padding:12px 20px;                /* thin bar; adjust to taste */
+}
+.service-list{
+  list-style:none;
+  display:flex; flex-wrap:wrap;
+  align-items:center; justify-content:center;
+  gap:8px 12px;
+  font-weight:800;                  /* bold white text */
+  font-size:15px;                   /* subtle, high-density */
+  letter-spacing:.2px;
+}
+.service-list li{ white-space:nowrap }
+.service-list li:not(:last-child)::after{
+  content:"|";
+  margin:0 8px 0 12px;
+  opacity:.65;
+  font-weight:700;
+}
+
+/* small screens—tighten slightly */
+@media (max-width:760px){
+  .service-bar-inner{ padding:10px 16px }
+  .service-list{ font-size:14px; gap:6px 10px }
+  .service-list li:not(:last-child)::after{ margin:0 6px 0 10px }
+}
+
+
 /* =================== MAIN CONTENT =================== */
 .grid{display:grid; gap:20px}
 .cards{grid-template-columns:repeat(auto-fit, minmax(340px, 1fr))}
