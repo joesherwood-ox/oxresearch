@@ -60,6 +60,13 @@ html,body{
 }
 .hero-content{position:relative; z-index:2; display:flex; align-items:center; min-height:inherit; padding:60px 0}
 .hero-content .container{width:100%; display:flex; align-items:center}
+/* === HERO LEFT EDGE ALIGNMENT === */
+.hero-content .container{
+  max-width: var(--wrap-header);   /* match services bar/contact width */
+  margin: 0 auto;
+  padding: 0 20px;                 /* same side padding as other sections */
+}
+
 
 /* Left-aligned hero copy; slightly smaller than v3 */
 .hero-text{ text-align:left; color:#fff; max-width:1280px } /* allow wide single-line text */
@@ -89,15 +96,15 @@ html,body{
 
 /* =================== HIGHLIGHTED SERVICES BAR =================== */
 .service-bar{
-  background:#fff;
-  color:#000;
+  background:#000;                 /* was #fff */
+  color:#fff;
   border-bottom:1px solid rgba(255,255,255,.08);
   line-height:1;
 }
 .service-bar-inner{
   max-width:var(--wrap-header);
   margin:0 auto;
-  padding:20px 20px;
+  padding:20px 20px;               /* keep your “twice as tall” look */
 }
 .service-list{
   list-style:none;
@@ -106,13 +113,19 @@ html,body{
   gap:10px 14px;
   font-weight:800;
   font-size:20px;
-  letter-spacing:.15px;
+
+  /* cyan gradient text */
+  background:linear-gradient(90deg, #BFFEFF 0%, #00FDFF 55%, #7DFDFF 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 .service-list li{ white-space:nowrap }
 .service-list li:not(:last-child)::after{
   content:"|";
   margin:0 8px 0 12px;
-  opacity:.65;
+  color:#00FDFF;                   /* solid cyan for the divider */
+  opacity:.85;
   font-weight:700;
 }
 
@@ -125,19 +138,19 @@ html,body{
 
 /* =================== WHAT WE DO =================== */
 .whatwedo{
-  background:#0b0b0b;              /* subtle dark to contrast the black services bar */
-  color:#e9ecef;
+  background:#fff;                 /* was dark */
+  color:#000;                      /* default text on white */
   border-top:1px solid var(--line);
 }
 .whatwedo-inner{
-  max-width:var(--wrap-header);
+  max-width:var(--wrap-header);    /* stays aligned with services bar */
   margin:0 auto;
   padding:48px 20px 56px;
 }
 .whatwedo-title{
   font-size:28px;
   font-weight:900;
-  color:#fff;
+  color:#000;                      /* black title */
   margin:0 0 24px 0;
   letter-spacing:.2px;
 }
@@ -147,45 +160,49 @@ html,body{
   grid-template-columns: repeat(3, 1fr);
   gap:22px;
 }
+
 .wwd-card{
-  background:#111;                 /* card surface */
-  border:1px solid var(--line);
+  background:#fff;                 /* white cards */
+  border:1px solid #E5E7EB;        /* light border on white for subtle definition */
   border-radius:14px;
   padding:20px 18px 18px;
-  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 6px 18px rgba(0,0,0,.18);
+  box-shadow:0 2px 14px rgba(0,0,0,.06);
 }
+
 .wwd-head{
   display:flex; align-items:center; gap:10px;
   margin-bottom:8px;
 }
 .wwd-icon{
   width:22px; height:22px;
-  color:var(--indigo);              /* #161759 */
+  color:#000;                      /* icons black */
   flex:0 0 22px;
 }
 .wwd-h3{
   font-size:18px;
   font-weight:900;
-  color:#fff;
+  color:var(--indigo);             /* titles indigo (#161759) */
   margin:0;
 }
+
 .wwd-sub{
-  margin:2px 0 10px 32px;          /* indent under icon/title line */
-  font-weight:700;
-  color:#eafcff;                    /* slight pop for subhead */
+  margin:2px 0 10px 32px;
+  font-weight:800;
+  color:var(--teal);               /* teal subhead */
 }
-.wwd-card p{ margin:0 0 12px 0; line-height:1.55 }
+
+.wwd-card p{ margin:0 0 12px 0; line-height:1.55; color:#000 }  /* body copy black */
 
 .wwd-cap-title{
   margin:6px 0 6px 0;
-  font-weight:800;
-  color:#fff;
+  font-weight:900;
+  color:var(--teal);               /* “Core capabilities include:” teal */
 }
 
 .wwd-caps{
   list-style:none; padding:0; margin:0;
   display:flex; flex-wrap:wrap; gap:6px 10px;
-  color:#cfd6db;
+  color:#111;                      /* capability chips dark text */
 }
 .wwd-caps li{
   white-space:nowrap;
@@ -195,13 +212,13 @@ html,body{
 .wwd-caps li:not(:last-child)::after{
   content:"•";
   position:absolute; right:4px; top:0;
-  opacity:.55;
+  opacity:.45;
 }
 
-/* Hover affordance */
+/* Hover affordance on light cards */
 .wwd-card:hover{
-  border-color:rgba(0,253,255,.35); /* Cyan accent glow */
-  box-shadow:0 1px 0 rgba(255,255,255,.05) inset, 0 10px 28px rgba(0,253,255,.10);
+  border-color:rgba(0,253,255,.35);
+  box-shadow:0 6px 20px rgba(0,0,0,.10);
   transform:translateY(-1px);
   transition:.2s ease;
 }
@@ -217,6 +234,7 @@ html,body{
   .wwd-h3{ font-size:17px }
   .wwd-icon{ width:20px; height:20px }
 }
+
 
 
 
