@@ -2,20 +2,26 @@
 :root{
   --indigo:#161759; --cyan:#00FDFF; --teal:#00A7A8;
   --ink:#eaf6f7; --muted:#b7d8db; --line:#1a2127; --bg:#0b0f12;
-  --wrap:1640px;       /* wider header/body container */
-  --wrap-wide:1760px;  /* extra-wide option if needed elsewhere */
+
+  /* widths */
+  --wrap:1640px;           /* main BODY width (unchanged) */
+  --wrap-header:1800px;    /* NEW: wider HEADER width */
+  --wrap-wide:1760px;      /* optional extra-wide sections */
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
+
 html,body{
   height:100%;
   font:17px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:var(--ink);
-  background:radial-gradient(1200px 600px at 10% -10%, rgba(0,253,255,.10), transparent),
-             linear-gradient(#0a0d10,#0b0f12);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(0,253,255,.10), transparent),
+    linear-gradient(#0a0d10,#0b0f12);
 }
 
 /* containers */
-.container{max-width:var(--wrap);margin:0 auto;padding:0 20px} /* smaller side padding to push content outward */
+.container{max-width:var(--wrap);margin:0 auto;padding:0 20px}
 .container-wide{max-width:var(--wrap-wide);margin:0 auto;padding:0 20px}
 .pad-y{padding:80px 0}
 
@@ -27,13 +33,13 @@ html,body{
   border-bottom:1px solid var(--line);
 }
 .nav-inner{
-  max-width:var(--wrap);
+  max-width:var(--wrap-header);   /* use the wider header container */
   margin:0 auto;
-  padding:18px 20px;                         /* slightly tighter than v3 to shift logo left */
+  padding:18px 20px;
   display:flex; align-items:center; justify-content:space-between;
 }
 .brand{display:flex; align-items:center; gap:10px; text-decoration:none}
-.brand-word{height:50px; width:auto}         /* keep generous logo size */
+.brand-word{height:50px; width:auto}
 .nav-links{display:flex; gap:30px; margin-left:auto}
 .nav a{color:#161759; text-decoration:none; font-weight:600}
 .nav a:hover{color:var(--teal)}
