@@ -32,9 +32,13 @@
 
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
       <nav class="nav-links" aria-label="Main">
-        <a href="/">Home</a>
+        <a href="/index.html">Home</a>
         <a href="/services.html">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="/surveys.html">Surveys</a>
+        <a href="/research.html">Research</a>
+        <a href="/courses.html">Courses</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </nav>
     </div>
   </header>
@@ -215,36 +219,55 @@
 </section>
 
   <!-- =================== CONTACT =================== -->
-  <section id="contact" class="container container-wide pad-y">
-    <h2>Start a conversation</h2>
-    <p class="lead">Tell us your goals. We’ll respond within 1–2 business days.</p>
+  <section id="contact" class="contact-section home-contact">
+    <div class="contact-card">
+      <h2>Start a conversation</h2>
+      <p class="lead">Tell us your goals. We’ll respond within 1–2 business days.</p>
+      <form class="contact-form" action="https://formspree.io/f/mrbaeekj" method="POST" accept-charset="UTF-8">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="_replyto" type="email" required>
+        </div>
+        <div>
+          <label for="org">Organization (optional)</label>
+          <input id="org" name="organization" type="text">
+        </div>
+        <div class="full">
+          <label for="msg">How can we help?</label>
+          <textarea id="msg" name="message" rows="5" required></textarea>
+        </div>
 
-    <form class="contact" action="https://formspree.io/f/mrbaeekj" method="POST" accept-charset="UTF-8">
-      <div class="fld"><label for="name">Name</label><input id="name" name="name" type="text" required></div>
-      <div class="fld"><label for="email">Email</label><input id="email" name="_replyto" type="email" required></div>
-      <div class="fld"><label for="org">Organization (optional)</label><input id="org" name="organization" type="text"></div>
-      <div class="fld full"><label for="msg">How can we help?</label><textarea id="msg" name="message" rows="5" required></textarea></div>
+        <input type="hidden" name="_subject" value="New inquiry from Ox Research">
+        <input type="text" name="_gotcha" style="display:none">
 
-      <input type="hidden" name="_subject" value="New inquiry from Ox Research">
-      <input type="text" name="_gotcha" style="display:none">
-
-      <button class="btn btn-primary" type="submit">Send</button>
-      <p class="privacy">We only use your information to respond. We never sell or share it.</p>
-    </form>
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="privacy-note">We only use your information to respond. We never sell or share it.</p>
+      </form>
+    </div>
   </section>
 
   <!-- =================== FOOTER =================== -->
-  <footer class="footer">
-    <div class="container foot">
-      <div class="foot-brand">
-        <img src="/assets/img/ox_logo_tagline_large.png" alt="Ox logo" />
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <img src="assets/img/oxfooterlogo.png" alt="Ox Research | Moving forward" class="footer-logo" />
+        <div class="footer-copy">© 2025 Ox Research, LLC</div>
       </div>
-      <nav aria-label="Footer">
-        <a href="/">Home</a>
-        <a href="/services.html">Services</a>
-        <a href="#contact">Contact</a>
+      <nav class="footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="surveys.html">Surveys</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
-      <small>© <span id="year"></span> Ox Research, LLC</small>
     </div>
   </footer>
 
