@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 <header class="site-header" role="banner">
@@ -36,36 +36,57 @@
 </header>
 <main class="main">
 
-<section class="container narrow">
-  <h1>Contact</h1>
-  <p>Let’s work together. Tell us about your goals and constraints. We’ll respond with next steps and a suggested path forward.</p>
+<section class="contact-section contact-page">
+  <div class="container">
+    <div class="contact-card">
+      <h1>Contact</h1>
+      <p class="lead">Let’s work together. Tell us about your goals and constraints. We’ll respond with next steps and a suggested path forward.</p>
 
-  <form class="contact-form" action="https://formspree.io/f/mrbaeekj" method="POST">
-    <label>Name<br><input type="text" name="name" required></label>
-    <label>Organization<br><input type="text" name="organization"></label>
-    <label>Email<br><input type="email" name="email" required></label>
-    <label>Message<br><textarea name="message" rows="6" required></textarea></label>
-    <button class="btn btn-primary" type="submit">Send</button>
-  </form>
+      <form class="contact-form" action="https://formspree.io/f/mrbaeekj" method="POST">
+        <div>
+          <label for="contact-name">Name</label>
+          <input id="contact-name" type="text" name="name" required>
+        </div>
+        <div>
+          <label for="contact-org">Organization</label>
+          <input id="contact-org" type="text" name="organization">
+        </div>
+        <div>
+          <label for="contact-email">Email</label>
+          <input id="contact-email" type="email" name="email" required>
+        </div>
+        <div class="full">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" rows="6" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+        <p class="privacy-note">We only use your information to respond. We never sell or share it.</p>
+      </form>
 
-  <p class="alt-contact">Prefer email? Write to <a href="mailto:contact@oxresearch.org">contact@oxresearch.org</a></p>
+      <p class="alt-contact">Prefer email? Write to <a href="mailto:contact@oxresearch.org">contact@oxresearch.org</a></p>
+    </div>
+  </div>
 </section>
 
 </main>
 <footer class="site-footer" role="contentinfo">
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <img src="logo_full.png" alt="Ox Research" class="logo-foot" />
+  <div class="footer-inner">
+    <div class="footer-left">
+      <img src="assets/img/oxfooterlogo.png" alt="Ox Research | Moving forward" class="footer-logo" />
+      <div class="footer-copy">© 2025 Ox Research, LLC</div>
     </div>
-    <div class="footer-links">
-      <a href="services.html">Services</a>
-      <a href="research.html">Research</a>
-      <a href="courses.html">Courses</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
+    <nav class="footer-nav" aria-label="Footer">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="surveys.html">Surveys</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-  <div class="container copyright">© Ox Research</div>
 </footer>
 </body>
 </html>
