@@ -47,16 +47,21 @@ a{color:inherit}
 /* =================== NAV =================== */
 .nav{
   position:sticky; top:0; z-index:50;
-  display:flex; align-items:center; justify-content:space-between; gap:16px;
-  padding:14px 20px;
-  background:rgba(255,255,255,.92); backdrop-filter:saturate(140%) blur(8px);
+  background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(140%) blur(8px);
   border-bottom:1px solid var(--line);
 }
-.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; padding:2px 0; }
-.brand-word{ display:block; height:104px; width:auto; max-width:720px; } /* bigger logo */
-.nav-links{ display:flex; gap:22px }
-.nav a{ color:var(--muted); text-decoration:none }
-.nav a:hover{ color:var(--ink) }
+.nav-inner{
+  max-width:var(--wrap-header, 2100px);
+  margin:0 auto;
+  padding:18px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{ display:flex; align-items:center; gap:10px; text-decoration:none; }
+.brand-word{ height:50px; width:auto; }
+.nav-links{ display:flex; gap:30px; margin-left:auto; }
+.nav a{ color:#161759; text-decoration:none; font-weight:600; }
+.nav a:hover{ color:var(--brand-d); }
 .nav-toggle{ display:none; background:none; border:1px solid var(--line); color:var(--ink); padding:6px 10px; border-radius:8px }
 
 @media (max-width:760px){
@@ -72,9 +77,7 @@ a{color:inherit}
 
 @media (max-width:768px){
   body{ font-size:15px; }
-  .nav{ flex-wrap:wrap; }
-  .footer-inner,
-  .nav{ align-items:flex-start; gap:12px; flex-direction:column; }
+  .footer-inner{ align-items:flex-start; gap:12px; flex-direction:column; }
   .footer-nav ul{ justify-content:flex-start; flex-wrap:wrap; }
   .contact-section{ padding:60px 0; }
   .contact-card{ padding:28px 22px; }
