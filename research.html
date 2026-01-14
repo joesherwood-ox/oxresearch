@@ -3,74 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research | Future of Work Insights</title>
-  <meta name="description" content="Independent and synthesized research on workforce planning, performance systems, feedback culture, mental health program outcomes, AI, and more." />
-  <meta property="og:title" content="Research | Future of Work Insights" />
-  <meta property="og:description" content="Independent and synthesized research on workforce planning, performance systems, feedback culture, mental health program outcomes, AI, and more." />
+  <title>Research | Ox Research</title>
+  <meta name="description" content="Short posts translating research into practical decisions for leaders." />
+  <meta property="og:title" content="Research | Ox Research" />
+  <meta property="og:description" content="Short posts translating research into practical decisions for leaders." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:image" content="/assets/hero/hero-wave.svg" />
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<header class="site-header" role="banner">
-  <div class="container nav-wrap">
-    <a class="brand" href="index.html" aria-label="Ox Research home">
-      <img src="logo_icon.png" alt="Ox Research logo" class="logo" />
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/index.html">
+      <img class="brand-word" src="/assets/img/oxres_logo_bull_blue.png" alt="Ox Research" />
     </a>
-    <nav class="nav" role="navigation" aria-label="Primary">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="services.html" class="nav-link">Services</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="/index.html">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/products.html">Products</a>
+      <a href="/research.html" aria-current="page">Research</a>
+      <a href="/contact.html">Contact</a>
     </nav>
   </div>
 </header>
 <main class="main">
 
-<section class="container">
-  <h1>Research</h1>
-  <p>Accessible, practice-ready insights on the future of work. We publish independent studies and synthesize leading academic and applied research for busy leaders.</p>
+  <section class="hero-lite">
+    <div class="container">
+      <h1>Research — Coming Soon</h1>
+      <p class="sub">Short posts translating research into practical decisions for leaders.</p>
+    </div>
+  </section>
 
-  <h3>Content types</h3>
-  <ul>
-    <li>Briefs (3–5 min reads)</li>
-    <li>Deep dives (10–15 min reads)</li>
-    <li>Data notebooks (methods + charts)</li>
-  </ul>
+  <section class="pad-y">
+    <div class="container">
+      <h2>Question of the Week</h2>
+      <p>Results may be summarized in future posts.</p>
+      <a class="btn btn-primary" href="#poll">Answer the question</a>
 
-  <h3>Starter topics</h3>
-  <ul>
-    <li>Strategic workforce planning in constrained budgets</li>
-    <li>Building feedback culture without burnout</li>
-    <li>Mental health program outcomes: what works, for whom</li>
-    <li>Performance systems: fairness, motivation, and bias</li>
-    <li>Bilingual research: increasing reach and rigor</li>
-    <li>Leveraging AI for workforce insight and organizational improvement</li>
-  </ul>
-
-  <div class="note">Check back soon—new briefs and deep dives are on the way.</div>
-</section>
+      <div class="survey-embed" id="poll">
+        <!-- Replace FORM_EMBED_URL with your Google Form embed link. -->
+        <iframe title="Ox Research weekly question" src="FORM_EMBED_URL" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 
 </main>
 <footer class="site-footer" role="contentinfo">
   <div class="footer-inner">
     <div class="footer-left">
       <img src="assets/img/oxfooterlogo.png" alt="Ox Research | Moving forward" class="footer-logo" />
-      <div class="footer-copy">© 2025 Ox Research, LLC</div>
+      <div class="footer-meta">
+        <div class="footer-copy">© 2025 Ox Research, LLC</div>
+        <div class="footer-email">contact@oxresearch.org</div>
+        <div class="footer-tagline">2–4 week insight and people-science products.</div>
+      </div>
     </div>
     <nav class="footer-nav" aria-label="Footer">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="/products.html">Products</a></li>
+        <li><a href="/research.html" aria-current="page">Research</a></li>
+        <li><a href="/contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </footer>
+<script defer src="/js/app.js"></script>
 </body>
 </html>
